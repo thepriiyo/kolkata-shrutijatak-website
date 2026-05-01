@@ -1,0 +1,526 @@
+KOLKATA SHRUTIJATAK
+ASSET MANIFEST V1
+Version: 1.0 Status: Final for Asset Production Phase Theme: Digital Monument — Bengali Heritage from the Near Future
+
+01. BRAND ASSETS
+
+1.1 Primary Logo
+Purpose: Main institutional identity.
+Asset: Kolkata Shrutijatak wordmark (English)
+Format:
+	•	SVG (primary)
+	•	PNG transparent fallback
+Size Recommendations:
+	•	Navbar: 160–220px width
+	•	Footer: 220–280px width
+	•	Social sharing: scalable
+Usage:
+	•	Navbar
+	•	Footer
+	•	Favicon derivatives
+	•	PDF prospectus
+	•	Social banners
+
+1.2 Secondary Logo
+Purpose: Compact horizontal mark.
+Asset: Abbreviated wordmark / monogram
+Example: KS / KŚ / KSJ
+Format:
+	•	SVG
+	•	PNG
+Usage:
+	•	Mobile navbar
+	•	Footer
+	•	Loading screen
+	•	Watermark
+
+1.3 Bengali Logo Lockup
+Asset: কলকাতা শ্রুতিজাতক
+Format:
+	•	SVG
+	•	PNG
+Usage:
+	•	Hero
+	•	About page
+	•	Footer
+	•	Social banners
+
+1.4 Favicon
+Formats:
+	•	16x16
+	•	32x32
+	•	48x48
+	•	Apple touch icon 180x180
+Style: Minimal seal or monogram.
+
+1.5 Social Sharing Image
+Format: 1200 × 630
+Purpose: Open Graph / Twitter previews.
+Composition:
+	•	logo
+	•	cultural object
+	•	subtle editorial background
+
+1.6 Institutional Seal / Emblem (Optional)
+Style: Circular academic seal.
+Possible elements:
+	•	manuscript circle
+	•	ghungroo
+	•	sitar geometry
+	•	Bengali typography
+Usage:
+	•	certificates
+	•	admissions
+	•	decorative sections
+
+02. HERO ASSETS
+
+2.1 Hero Object Photography
+Need 3 interchangeable hero objects.
+Asset A — Esraj Hero
+Quantity: 1
+Orientation:
+	•	Desktop landscape
+	•	Mobile portrait crop
+Style:
+	•	isolated object
+	•	museum photography
+Lighting: Soft spotlight from upper left.
+Background: Bone / charcoal gradient.
+
+Asset B — Sitar Hero
+Same spec.
+
+Asset C — Tanpura Hero
+Same spec.
+
+2.2 Hero Background Texture
+Assets Needed:
+	•	manuscript texture
+	•	paper grain
+	•	soft grain layer
+Format: WEBP / PNG
+Opacity: 2–6%
+
+2.3 Hero Atmosphere Layer
+Assets:
+	•	spotlight haze
+	•	subtle vignette
+	•	soft shadow gradient
+Format: PNG transparent
+
+2.4 Supporting Hero Visuals
+Assets:
+	•	manuscript fragment
+	•	terracotta geometry
+	•	abstract temple line
+Quantity: 3–5
+
+03. OBJECT PHOTOGRAPHY LIBRARY
+
+3.1 Instruments
+Asset
+Qty
+Esraj
+3
+Sitar
+3
+Tabla
+3
+Harmonium
+3
+Tanpura
+3
+Flute
+2
+Formats:
+	•	WEBP
+	•	PNG transparent cutout optional
+Orientations:
+	•	portrait
+	•	landscape
+	•	square
+Background: neutral bone / charcoal
+
+3.2 Dance Objects
+Asset
+Qty
+Ghungroo
+3
+Dance bells closeup
+2
+Costume textile detail
+2
+
+3.3 Theatre Objects
+Asset
+Qty
+Theatre mask
+2
+Spotlight object
+2
+Script/manuscript
+3
+
+3.4 Heritage Artifacts
+Asset
+Qty
+Terracotta sculpture
+3
+Brass lamp
+2
+Temple geometry crop
+3
+
+04. PEOPLE / PORTRAIT ASSETS
+
+4.1 Founder Portrait
+Founder: Piu Biswas Das
+Quantity: 3–5
+Need:
+	•	hero portrait
+	•	editorial portrait
+	•	candid institutional portrait
+Lighting:
+	•	Rembrandt soft lighting
+Wardrobe:
+	•	elegant Bengali/classical attire
+Background:
+	•	neutral studio
+	•	stage backdrop optional
+
+4.2 Faculty Portraits
+Each faculty: 2–3 portraits
+Need:
+	•	headshot
+	•	waist-up
+	•	teaching/action shot
+Background:
+	•	clean neutral
+	•	stage/classroom
+
+4.3 Student Portraits
+Quantity: 10–15
+Need:
+	•	performance portraits
+	•	candid practice
+	•	classroom
+
+4.4 Performers
+Quantity: 8–12
+Use: gallery/events
+
+4.5 Alumni
+Quantity: 5–8
+Professional portraits.
+
+05. CULTURAL / ATMOSPHERIC ASSETS
+
+Stage Photography
+Quantity: 8
+Need:
+	•	wide stage
+	•	spotlight silhouette
+	•	performer closeup
+Aspect: 16:9 / 4:5
+
+Rehearsal Photography
+Quantity: 8
+Need:
+	•	classroom
+	•	instruments
+	•	teaching
+
+Performance Stills
+Quantity: 12
+
+Audience Atmosphere
+Quantity: 5
+Need:
+	•	applause
+	•	audience silhouette
+
+Classroom Imagery
+Quantity: 8
+
+Archival Compositions
+Quantity: 6
+Style: high-grain monochrome
+
+06. GALLERY ASSETS
+
+Minimum Launch Assets:
+Images
+Minimum: 50
+Videos
+Minimum: 4
+
+Category Breakdown
+Category
+Count
+Performances
+12
+Classes
+8
+Faculty
+6
+Backstage
+5
+Rehearsals
+6
+Events
+5
+Instruments
+4
+Campus/Interior
+4
+
+07. PROGRAM PAGE ASSETS
+
+Music
+Need:
+	•	hero image
+	•	5 supporting images
+	•	3 object photos
+	•	3 student photos
+
+Dance
+Same.
+
+Drama
+Same.
+
+Rabindra Sangeet
+Same.
+
+Heritage Arts
+Same.
+
+08. EVENT ASSETS
+
+Event Cover
+Size: 1600x900
+
+Poster
+Formats:
+	•	1080x1350
+	•	1080x1920
+	•	A4
+
+Performer Portraits
+2–5 per event.
+
+Event Gallery
+Minimum: 8 images/event
+
+09. TEXTURE / BACKGROUND ASSETS
+
+Manuscript Textures
+Qty: 4
+Opacity: 3–7%
+
+Paper Grain
+Qty: 3
+
+Terracotta Texture
+Qty: 3
+
+Noise Texture
+Qty: 2
+Opacity: 1–2%
+
+Gradient Overlays
+Qty: 5
+
+Spotlight Overlays
+Qty: 4
+PNG transparent
+
+10. ICON / MICRO-ASSET LIBRARY
+
+Icon Pack
+Style:
+	•	thin outline
+	•	minimal editorial
+Stroke: 1.5px–1.75px
+Need:
+	•	arrow
+	•	calendar
+	•	location
+	•	mail
+	•	phone
+	•	user
+	•	play
+	•	download
+
+Decorative Motifs
+Need:
+	•	temple lines
+	•	manuscript underline
+	•	seal circles
+	•	dividers
+Qty: 10–15 SVGs
+
+11. VIDEO ASSETS
+
+Hero Ambient Loop
+Duration: 8–15 sec
+Loop: seamless
+Content: slow object rotation / spotlight drift
+Compression: MP4 web optimized
+
+Cultural Immersion Video
+Duration: 10–20 sec
+Content: performance footage
+
+Admissions Background
+Duration: 8–12 sec
+Content: slow spotlight / audience / stage
+
+Performance Clips
+Minimum: 4
+Duration: 15–30 sec
+
+12. FILE FORMAT RULES
+
+SVG
+Use:
+	•	logos
+	•	icons
+	•	dividers
+
+PNG
+Use:
+	•	overlays
+	•	transparency assets
+
+WEBP
+Use:
+	•	all photography
+
+AVIF
+Optional next-gen image
+
+MP4
+Video loops
+Codec: H264
+
+13. FILE ORGANIZATION SYSTEM
+/assets
+  /brand
+    /logos
+    /favicons
+    /social
+
+  /hero
+    /objects
+    /textures
+    /overlays
+
+  /objects
+    /instruments
+    /dance
+    /theatre
+    /heritage
+
+  /people
+    /founder
+    /faculty
+    /students
+    /alumni
+
+  /gallery
+    /performances
+    /classes
+    /events
+    /backstage
+
+  /events
+    /covers
+    /posters
+
+  /textures
+  /icons
+  /video
+
+14. PRIORITY MATRIX
+
+Tier 1 — MVP Launch Required
+	•	logo system
+	•	hero assets
+	•	founder portraits
+	•	faculty portraits
+	•	programs assets
+	•	50 gallery images
+	•	4 videos
+	•	icon set
+	•	textures
+
+Tier 2 — Enhancement
+	•	alumni assets
+	•	archival sets
+	•	advanced event posters
+	•	extra object photography
+
+Tier 3 — Future
+	•	motion graphics
+	•	3D objects
+	•	interactive assets
+
+15. ASSET PRODUCTION CHECKLIST
+
+Brand
+	•	primary logo
+	•	secondary logo
+	•	Bengali lockup
+	•	favicon
+	•	OG image
+
+Hero
+	•	3 hero objects
+	•	hero textures
+	•	overlays
+
+Objects
+	•	instruments
+	•	dance objects
+	•	theatre objects
+	•	heritage artifacts
+
+Portraits
+	•	founder
+	•	faculty
+	•	students
+	•	alumni
+
+Gallery
+	•	50 images minimum
+	•	4 videos minimum
+
+Programs
+	•	Music
+	•	Dance
+	•	Drama
+	•	Rabindra Sangeet
+	•	Heritage Arts
+
+Events
+	•	event covers
+	•	posters
+	•	galleries
+
+Micro-assets
+	•	icons
+	•	dividers
+	•	motifs
+
+Backgrounds
+	•	manuscript
+	•	grain
+	•	spotlight
+	•	terracotta
+
+END OF ASSET MANIFEST V1
+
+
+

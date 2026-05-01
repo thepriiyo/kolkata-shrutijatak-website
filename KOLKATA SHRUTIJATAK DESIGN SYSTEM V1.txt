@@ -1,0 +1,453 @@
+KOLKATA SHRUTIJATAK
+DESIGN SYSTEM V1
+Institutional Website Visual System Version 1.0 — May 2026
+Design Theme: Apple-grade clarity × Museum editorial sophistication × Bengali heritage × Near-future institutional design (2026/2027)
+
+01. COLOR SYSTEM
+1.1 Brand Core Palette
+Primary Crimson
+Used only for authority signals, CTA emphasis, active states.
+	•	Primary Crimson: #8C1D2C
+	•	Primary Crimson Dark: #6B1320
+	•	Primary Crimson Light: #B73A4C
+Usage:
+	•	Apply buttons
+	•	Active nav states
+	•	Links
+	•	Small highlights
+	•	Important micro-elements
+Rule: Crimson must never exceed 8–10% visual dominance per screen.
+
+1.2 Neutral Palette
+Bone / Editorial Base
+	•	Bone White: #F8F5F0
+	•	Warm Ivory: #F3EEE7
+Whites
+	•	Pure White: #FFFFFF
+Charcoal System
+	•	Deep Charcoal: #111111
+	•	Soft Charcoal: #222222
+	•	Muted Gray: #5A5A5A
+	•	Light Gray: #D8D3CC
+Usage:
+	•	Typography
+	•	Dividers
+	•	Layout backgrounds
+	•	Cards
+
+1.3 Accent Palette
+Used very sparingly.
+Heritage Gold
+	•	Muted Gold: #B89A63
+Usage:
+	•	Borders
+	•	Fine decorative lines
+	•	Icon accents
+	•	Premium indicators
+Terracotta Accent
+	•	Terracotta: #A35C43
+Usage:
+	•	Cultural details only
+
+1.4 Background Layers
+Layer 01
+Main background:
+	•	Bone White
+Layer 02
+Alternating section:
+	•	Warm Ivory
+Layer 03
+High contrast / admissions:
+	•	Deep Charcoal
+
+1.5 Text Hierarchy Colors
+Primary Text
+	•	Deep Charcoal
+Secondary Text
+	•	Soft Charcoal
+Tertiary Text
+	•	Muted Gray
+Inverse Text
+	•	Bone White
+
+1.6 Borders / Dividers
+	•	Light Gray 1px
+	•	Gold 1px accent only for premium separators
+
+1.7 Hover States
+Buttons:
+	•	Crimson → Crimson Dark
+Cards:
+	•	Slight elevation
+	•	Shadow opacity increase
+	•	Border tint crimson 10%
+Links:
+	•	Underline reveal
+
+02. TYPOGRAPHY SYSTEM
+
+2.1 English Heading Font
+Primary Heading
+Playfair Display
+Use:
+	•	Hero
+	•	Section titles
+	•	Statements
+Tone: Editorial / museum / premium
+
+2.2 English Body Font
+Primary Body
+Inter
+Use:
+	•	Paragraphs
+	•	Forms
+	•	Buttons
+	•	Navigation
+Tone: Modern, clean, Apple-like clarity
+
+2.3 Bengali Typography
+Bengali Heading
+Noto Serif Bengali
+Bengali Body
+Noto Sans Bengali
+Tone: Elegant, highly legible
+
+2.4 Font Scale
+Desktop
+H1
+72–120px
+H2
+48–72px
+H3
+32–48px
+H4
+24–32px
+H5
+18–24px
+H6
+16–18px
+Body Large
+20px
+Body
+16px
+Small
+14px
+Caption
+12px
+
+Mobile
+H1
+44–64px
+H2
+32–44px
+H3
+24–32px
+Body
+16px
+Small
+14px
+
+2.5 Weights
+	•	300 Light
+	•	400 Regular
+	•	500 Medium
+	•	600 SemiBold
+	•	700 Bold
+Avoid 800+ except micro branding.
+
+2.6 Line Heights
+Headings:
+	•	0.95–1.1
+Body:
+	•	1.6–1.8
+Captions:
+	•	1.4
+
+2.7 Letter Spacing
+Navigation:
+	•	0.12em–0.3em uppercase
+Body:
+	•	normal
+Hero:
+	•	slightly negative
+
+03. SPACING SYSTEM
+
+3.1 Section Spacing
+Desktop:
+	•	120–180px vertical
+Mobile:
+	•	72–100px vertical
+Shock sections:
+	•	100vh minimum
+
+3.2 Containers
+Desktop max:
+	•	1440px
+Editorial:
+	•	1280px
+Reading width:
+	•	72ch max
+
+3.3 Grid
+Desktop:
+	•	12 column
+Tablet:
+	•	8 column
+Mobile:
+	•	4 column
+
+3.4 Gutters
+Desktop:
+	•	32px
+Tablet:
+	•	24px
+Mobile:
+	•	16px
+
+3.5 Card Padding
+Large:
+	•	32px
+Medium:
+	•	24px
+Small:
+	•	16px
+
+04. COMPONENT SYSTEM
+
+Navbar
+Transparent on hero.
+Solid after scroll.
+Contains:
+	•	logo
+	•	6 nav items max
+	•	Apply CTA
+Height:
+	•	80px desktop
+	•	64px mobile
+
+Buttons
+Rounded rectangle.
+Not pill-shaped.
+Subtle authority.
+
+Forms
+Large inputs.
+Minimal borders.
+High spacing.
+No clutter.
+
+Footer
+4-column desktop.
+Stacked mobile.
+Bone/Charcoal depending on section.
+
+Section Headers
+Pattern:
+	•	Eyebrow label
+	•	Main heading
+	•	Supporting copy
+
+Image Containers
+Rounded: 0–12px max.
+Avoid excessive rounding.
+
+Gallery Grid
+Editorial masonry.
+Asymmetrical but disciplined.
+
+05. BUTTON LANGUAGE
+
+Primary Button
+Background: Crimson
+Text: White
+Padding: 16 x 28
+Hover: Dark crimson
+
+Secondary Button
+Background: Transparent
+Border: 1px charcoal
+Text: Charcoal
+Hover: Bone fill
+
+Tertiary
+Text only.
+Underline reveal.
+
+Disabled
+40% opacity.
+No hover.
+
+06. CARD SYSTEM
+
+Program Cards
+Image top.
+Text bottom.
+Hover: Lift + image zoom 3%.
+
+Faculty Cards
+Portrait dominant.
+Minimal copy.
+Serious layout.
+
+Event Cards
+Poster + metadata.
+
+Testimonials
+Editorial quote card.
+
+Gallery Cards
+Image only.
+Metadata on hover/tap.
+
+07. NAVBAR SYSTEM
+
+Desktop
+Horizontal.
+Sticky.
+Transparent → solid transition.
+
+Mobile
+Hamburger.
+Fullscreen drawer.
+Large tap targets.
+
+Active State
+Crimson underline or text.
+Not pills.
+Not tabs.
+
+CTA
+Always visible.
+Right aligned.
+
+08. MOTION LANGUAGE V1
+
+Motion Principles
+	•	Slow
+	•	Elegant
+	•	Controlled
+	•	Expensive-feeling
+No:
+	•	glitch
+	•	bounce
+	•	spinning
+	•	chaos
+
+Hero Reveal
+Sequence:
+	•	Fade in image/object
+	•	Text rise
+	•	Slight parallax activation
+Duration: 1.8–2.5s
+
+Scroll Reveal
+Fade + translate Y 20–40px
+Duration: 0.8–1.2s
+
+Hover Motion
+Cards:
+	•	lift 4–8px
+Images:
+	•	scale 1.03–1.05
+Buttons:
+	•	color transition only
+
+Parallax Rules
+Slow only.
+Max 8–12%.
+
+Section Transition
+Opacity shift.
+Soft background transition.
+
+Shock Moments
+Exactly 3.
+Shock 1
+Hero arrival
+Shock 2
+Cultural immersion fullscreen
+Shock 3
+Admissions contrast inversion
+
+09. IMAGE TREATMENT
+
+Photography Style
+	•	cinematic
+	•	editorial
+	•	museum quality
+
+Contrast
+Moderate-high.
+Avoid flatness.
+
+Grain
+Subtle film grain: 2–5%
+
+Cropping
+Intentional asymmetry.
+No awkward crops.
+
+Object Photography
+Preferred:
+	•	sitar
+	•	esraj
+	•	ghungroo
+	•	manuscripts
+	•	terracotta
+Lighting: Directional studio lighting.
+
+Archival Treatment
+	•	monochrome or warm tone
+	•	subtle grain
+	•	lower saturation
+
+10. ICONOGRAPHY
+
+Icon Style
+Outline icons only.
+Simple geometry.
+No filled icons.
+
+Stroke Width
+1.5–2px
+
+Usage
+	•	metadata
+	•	contact
+	•	forms
+	•	navigation
+Avoid decorative overuse.
+
+Decorative Motifs
+Allowed:
+	•	subtle temple geometry
+	•	manuscript lines
+	•	border systems
+Not allowed:
+	•	cliché paisley overload
+
+11. DESIGN PRINCIPLES SUMMARY
+Non-negotiable rules:
+	•	White/Bone negative space dominates.
+	•	Crimson is sacred; use sparingly.
+	•	Maximum 3 shock moments only.
+	•	Motion must feel expensive, never busy.
+	•	Every page must have one clear CTA.
+	•	Typography carries authority.
+	•	Bengali identity must feel integrated, not decorative.
+	•	Images must feel curated, never random.
+	•	Mobile is primary.
+	•	No cyber aesthetics.
+	•	No OS simulation.
+	•	No glitch effects.
+	•	Every section must breathe.
+	•	Premium > flashy.
+	•	Conversion clarity beats visual experimentation.
+
+SYSTEM SUMMARY
+Visual Identity: A premium Bengali cultural institution from the near future.
+Feels like: Apple Store × museum editorial website × cultural monument.
+Not: Startup dashboard, cyberpunk concept art, or experimental chaos.
+
+

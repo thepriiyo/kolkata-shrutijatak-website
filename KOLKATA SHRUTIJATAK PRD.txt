@@ -1,0 +1,604 @@
+KOLKATA SHRUTIJATAK
+কলকাতা শ্রুতিজাতক
+PRODUCT REQUIREMENTS DOCUMENT
+Institutional Website — Version 1.0
+May 2026
+"A serious Bengali cultural institution from the future."
+CONFIDENTIAL — INTERNAL USE ONLY
+SECTION 01
+Brand Positioning
+1.1  Institution Identity
+Institution Name
+Kolkata Shrutijatak
+Bengali Name
+কলকাতা শ্রুতিজাতক
+Category
+Premium Bengali Cultural Institution
+Disciplines
+Music, Dance, Drama, Rabindra Sangeet, Heritage Arts
+Founded By
+Piu Biswas Das
+Location
+Kolkata, West Bengal, India
+Digital Presence
+Primary institutional website (flagship digital asset)
+1.2  Brand Promise
+Core Positioning Statement
+— The premier institution for Bengali cultural disciplines — where heritage is engineered into excellence.
+— Rooted in centuries of Bengali artistic tradition. Designed for the next generation of practitioners.
+— Where classical depth meets futuristic institutional authority.
+1.3  Brand Personality
+The Kolkata Shrutijatak brand must embody five essential attributes simultaneously:
+	•	Authoritative — a serious, established cultural institution, not an amateur academy
+	•	Elevated — premium in every touchpoint, from typography to photography to copy tone
+	•	Heritage-rooted — unmistakably Bengali, unmistakably proud of that identity
+	•	Forward-looking — 2026–2027 design sensibility; modern, not nostalgic
+	•	Emotionally resonant — creates genuine desire to belong to this institution
+1.4  Visual North Star
+"Apple-grade futurism meets Bengali heritage, presented as a museum-quality cultural institution from the near future."
+Design fusion: Bengali cultural cues (terracotta, manuscripts, temple geometry, calligraphic Bengali typography, archival imagery) encoded into a next-generation digital system (editorial minimalism, ultra-clean layouts, sharp geometry, premium motion, depth layering).
+1.5  Differentiators
+The website must communicate these unique differentiators above all competitors:
+	•	Institutional lineage — founded with clear cultural mission and heritage purpose
+	•	Multi-disciplinary mastery — covers the full spectrum of Bengali arts under one roof
+	•	Quality of faculty — accomplished, credentialed practitioners, not casual instructors
+	•	Cultural mission — preservation, transmission, elevation of Bengali artistic heritage
+	•	Premium experience — every touchpoint communicates seriousness and excellence
+SECTION 02
+Target Audience
+2.1  Primary Audiences
+Audience A — Aspiring Students
+Age Range
+8 – 30 years
+Profile
+Individuals seeking formal training in music, dance, drama, or Rabindra Sangeet
+Geography
+Kolkata-based (primary); NRI Bengali diaspora (secondary)
+Motivation
+Skill development, certification, cultural connection, career in performing arts
+Decision Factor
+Faculty credibility, program structure, institutional reputation
+Audience B — Parents / Guardians
+Age Range
+30 – 55 years
+Profile
+Parents enrolling children; value institutional legitimacy and safety
+Motivation
+Cultural education for children, structured discipline, quality instruction
+Decision Factor
+Trust, credentials, safety, results, testimonials
+Audience C — Cultural Enthusiasts & Community
+Profile
+Bengali community members, arts patrons, cultural supporters
+Motivation
+Events, performances, workshops, donations, community belonging
+Decision Factor
+Event calendar, media archive, cultural storytelling
+Audience D — Media, Institutions & Collaborators
+Profile
+Journalists, cultural bodies, government arts councils, festival organisers
+Motivation
+Institutional credibility, partnership opportunities, media coverage
+Decision Factor
+About page, faculty, achievements, press-worthy content
+2.2  User Intent Categories
+	•	Discovery intent — first-time visitors learning what the institution is
+	•	Evaluation intent — comparing this institution with alternatives before enrolling
+	•	Action intent — ready to apply, enroll, or contact
+	•	Engagement intent — community members staying informed via events and media
+	•	Reference intent — alumni, faculty, or media seeking institutional information
+SECTION 03
+Business Goals
+3.1  Primary Business Objectives
+The website must directly serve these business outcomes, ranked by priority:
+Goal 1 — Enrollment Conversion
+The #1 measurable business outcome. Every section of the website must, directly or indirectly, funnel qualified visitors toward submitting an application or making an enrollment inquiry.
+Goal 2 — Institutional Authority
+Establish Kolkata Shrutijatak as the most credible, premium Bengali cultural institution online. The website is the institution's primary credential in the digital world. It must position the institution above competitors and informal alternatives.
+Goal 3 — Community & Event Engagement
+Drive attendance at performances, workshops, and cultural events. Build a loyal community of students, alumni, parents, and arts patrons around the institution.
+Goal 4 — Cultural Preservation Mission
+Serve the institution's deeper purpose: preserving and transmitting Bengali artistic heritage to future generations. The website is itself an act of cultural preservation — a digital monument to the tradition.
+Goal 5 — Long-Term Digital Presence
+Build an asset that grows in authority over time. Blog/journal content, gallery archives, faculty profiles, and student outcomes compound into an SEO and trust moat that is nearly impossible for competitors to replicate quickly.
+3.2  Business KPIs
+KPI
+Target (Year 1)
+Monthly Enrollment Inquiries via Website
+Measurable uplift vs. current
+Application Form Submissions
+Primary conversion metric
+Event Page Traffic
+Grows with each event published
+Organic Search Traffic
+Driven by blog + program pages
+Returning Visitor Rate
+Community engagement signal
+Average Session Duration
+Measures content quality
+Mobile Sessions
+> 60% of total sessions expected
+SECTION 04
+Core Website Goals
+The website must achieve five experiential goals. These are not features — they are outcomes that the design, content, and UX must collectively produce.
+Goal 1 — Instant Identity (0–3 Seconds)
+— Visitor understands what Kolkata Shrutijatak is within three seconds of landing.
+— Hero section communicates: institution name, cultural category, what is offered, and why it matters.
+— No ambiguity. No hunting. No reading required to grasp the core identity.
+
+Goal 2 — Perceived Premiumness
+— The site must feel like a serious institution, not a hobby school or community centre.
+— Faculty credentials, student outcomes, real events, and media presence must validate quality.
+— Every visual and typographic choice must reinforce institutional seriousness.
+
+Goal 3 — Crystal-Clear Offering
+— Visitor must immediately understand: which programs exist, who they are for, how to join.
+— Zero confusion about disciplines, levels, eligibility, or enrollment process.
+— Programs section must read like a premium product catalogue, not a course list.
+
+Goal 4 — Emotional Desire
+— Website must create the feeling: 'I want to be part of this institution.'
+— Achieved through beautiful visuals, student life content, performance media, cultural depth.
+— Memorable 'shock moments' — 2–3 high-impact sections that stop the scroll.
+
+Goal 5 — Zero-Friction Conversion
+— At any point in the journey, user can apply, contact, or ask questions in one action.
+— No dead ends. No confusion. Apply CTA always within reach.
+— Admissions section feels ceremonious, not bureaucratic.
+SECTION 05
+Full Sitemap & Pages
+5.1  Navigation Structure
+Top navigation must be clean, sticky, and conversion-oriented. Maximum 8 items.
+Nav Item
+Purpose
+Home
+Landing / identity hub
+About
+Institutional story and philosophy
+Programs
+Core offering — highest conversion value
+Faculty
+Trust and credibility builder
+Events
+Community engagement and current activity
+Gallery
+Visual proof and emotional depth
+Admissions
+Enrollment conversion engine
+Contact
+Accessibility and usability
+Persistent CTA button in nav: Apply Now — crimson, always visible.
+5.2  Main Pages
+Tier 1 — Core Pages (Must Launch)
+	•	Home — primary landing and identity page
+	•	About — institutional story, mission, vision, philosophy
+	•	Programs — all disciplines with individual program detail subpages
+	•	Faculty — teacher profiles with credentials and specialisations
+	•	Events — upcoming performances, workshops, auditions, festivals
+	•	Gallery — curated photo and video archive
+	•	Admissions — application process, eligibility, form
+	•	Contact — address, map, phone, email, contact form
+Tier 2 — Secondary Pages (Phase 2)
+	•	Blog / Cultural Journal — Bengali heritage articles, SEO authority
+	•	Individual Program Pages — dedicated URL per discipline
+	•	Individual Faculty Profiles — dedicated URL per faculty member
+	•	Event Detail Pages — per event, with registration
+	•	Alumni / Success Stories — dedicated social proof hub
+Tier 3 — Supporting Pages
+	•	FAQ — friction reduction
+	•	Privacy Policy
+	•	Terms & Conditions
+	•	404 Page — branded and helpful
+5.3  URL Structure Recommendation
+Page
+Recommended URL
+Home
+/
+About
+/about
+Programs
+/programs
+Individual Program
+/programs/rabindra-sangeet
+Faculty
+/faculty
+Individual Faculty
+/faculty/[name]
+Events
+/events
+Individual Event
+/events/[event-title]
+Gallery
+/gallery
+Admissions
+/admissions
+Contact
+/contact
+Blog
+/journal
+Blog Post
+/journal/[article-slug]
+SECTION 06
+Homepage Sections
+The homepage is the institution's digital front door and must deliver a complete emotional and informational journey. Sections must follow the rhythm: Impact → Information → Emotion → Proof → Conversion.
+Section 6.1 — Hero (Shock Moment 1)
+Purpose: Immediate identity + cinematic first impression
+— Full-screen immersive layout — 100vh minimum
+— Dominant cultural visual: instrument, performer silhouette, or cultural artifact composition
+— Large refined institution name: Kolkata Shrutijatak (English + Bengali)
+— Short positioning statement beneath: one line maximum
+— Two primary CTAs: Apply Now (primary, crimson), Explore Programs (secondary, outlined)
+— Subtle ambient motion — slow reveal, layered depth, not kinetic chaos
+— Sticky transparent nav that becomes solid on scroll
+Emotional target: cinematic arrival. Visitor feels they have entered something significant.
+Section 6.2 — Institutional Introduction
+Purpose: Establish legitimacy and philosophy
+— Brief editorial paragraph about the institution — origin, mission, essence
+— One strong philosophical statement set in large type
+— Supporting imagery: archival or stage photography
+— Link to full About page
+Section 6.3 — Disciplines / Programs Overview
+Purpose: Communicate the core offering
+— Grid or card system presenting all disciplines
+— Each card: discipline name, one-line description, and a visual anchor
+— Hover interaction: card elevation or image reveal
+— CTA per card: Explore [Discipline]
+— Section headline: something declarative, not generic
+Section 6.4 — Cultural Immersion Moment (Shock Moment 2)
+Purpose: Emotional depth — the soul of the institution
+— Full-screen or near full-screen visual section
+— Could be: performance still, stage photograph, cultural artifact composition
+— Overlaid with a powerful institutional statement — not marketing copy, but cultural declaration
+— This is the scroll-stopper. The section visitors remember.
+— No CTA required here — pure emotional impact only
+Section 6.5 — Faculty Highlight
+Purpose: Trust and credibility
+— 3–4 featured faculty profiles in portrait-led layout
+— Name, specialisation, key credential
+— Link to full faculty page
+— Tone: serious and authoritative, not warm-and-friendly
+Section 6.6 — Upcoming Events
+Purpose: Demonstrate institutional activity and current relevance
+— 3 upcoming events in a visual list or card format
+— Each entry: event name, date, type (performance / workshop / audition)
+— CTA: View All Events
+— Empty state fallback: 'Stay tuned for upcoming programmes' — never show blank section
+Section 6.7 — Student Achievements / Testimonials
+Purpose: Social proof and aspiration
+— 2–3 student success stories or testimonials
+— Formats: quote with name and discipline, or short outcome statement
+— Could include competition wins, certifications, career outcomes
+— Photographic portraits preferred — real faces, not stock imagery
+Section 6.8 — Gallery Preview
+Purpose: Visual proof and emotional atmosphere
+— 6–9 curated images in a masonry or editorial grid
+— Mix of: performances, classes, campus, instruments, cultural moments
+— CTA: Explore Full Gallery
+— High production standard — no casual phone photos in this preview section
+Section 6.9 — Admissions Invitation (Shock Moment 3)
+Purpose: Final conversion moment — ceremonious, not bureaucratic
+— Full-width section with strong contrast: dark background, crimson or gold accents
+— Headline: declarative, aspirational — not 'Apply Here'
+— Short enrollment invitation copy: 2–3 lines maximum
+— Primary CTA: Begin Your Application
+— Secondary: Download Prospectus / Contact Admissions
+— This section should feel like an invitation to join something significant
+Section 6.10 — Footer
+Element
+Content
+Column 1
+Institution name, Bengali name, one-line positioning, social links
+Column 2
+Quick links: Home, About, Programs, Faculty, Events, Gallery, Admissions
+Column 3
+Contact: address, phone, email
+Column 4
+Newsletter signup (optional Phase 2)
+Bottom bar
+Copyright © Kolkata Shrutijatak | Privacy Policy | Terms
+SECTION 07
+Conversion Goals
+7.1  Primary Conversion — Enrollment Inquiry
+Definition: A visitor submits the admissions inquiry form OR contacts the institution with intent to enroll.
+Trigger Points
+Hero CTA, Programs page CTAs, Admissions page form, Nav Apply Now
+Form Fields
+Name, Age/DOB, Discipline of Interest, Experience Level, Contact Number, Email, Message
+Confirmation
+Thank-you page / message confirming receipt, with next steps
+Follow-Up
+Automatic confirmation email with admissions information (Phase 2)
+7.2  Secondary Conversions
+	•	Event Registration — visitor registers for a performance, workshop, or audition
+	•	Gallery / Media Engagement — visitor spends significant time in gallery (depth signal)
+	•	Blog Engagement — visitor reads a cultural journal article (SEO + community signal)
+	•	Contact Form Submission — visitor submits a general inquiry
+	•	Social Follow — visitor follows Kolkata Shrutijatak on social channels
+	•	Newsletter Signup — visitor opts into updates (Phase 2)
+7.3  Conversion UX Principles
+	•	Apply CTA must be visible within 1 scroll on all devices at all times (sticky nav)
+	•	Admissions form must be embeddable on multiple pages — not isolated to one page
+	•	Form must have a program selector — visitor self-identifies their discipline
+	•	Zero mandatory fields beyond name, contact, and discipline — reduce friction first
+	•	Mobile form must be thumb-optimised — large tap targets, auto-fill compatible
+	•	Confirmation must feel celebratory, not mechanical — 'Welcome to Shrutijatak'
+SECTION 08
+Content Requirements Per Section
+8.1  Hero
+Institution Name
+Kolkata Shrutijatak (English)
+Bengali Name
+কলকাতা শ্রুতিজাতক
+Positioning Statement
+1 line — to be copywritten, culturally resonant
+Visual
+High-quality hero photograph or curated cultural composition
+CTA Copy
+'Apply Now' + 'Explore Programs'
+8.2  About Page
+Founding Story
+Origin, year established, founder's vision — Piu Biswas Das
+Mission Statement
+1–2 sentences: why the institution exists
+Vision Statement
+1–2 sentences: where the institution is going
+Cultural Philosophy
+What approach to teaching and transmission is used
+Why It Matters
+The cultural problem it solves — Bengali heritage, next generation
+Visual Support
+Founder photograph, archival images, institutional photography
+8.3  Programs
+For each discipline offered, the following content is required:
+	•	Discipline Name (English + Bengali)
+	•	Short description: what this discipline is and why it matters
+	•	What students will learn: 3–5 specific outcomes
+	•	Duration (e.g., 6 months, 1 year, ongoing)
+	•	Levels offered: Beginner, Intermediate, Advanced
+	•	Age / eligibility criteria
+	•	Schedule / batch information
+	•	Fee structure (or 'Contact for details')
+	•	CTA: Apply for [Discipline]
+8.4  Faculty
+For each faculty member:
+	•	Professional portrait photograph (high quality, controlled light)
+	•	Full name
+	•	Primary discipline
+	•	Years of experience
+	•	Key credentials / training background
+	•	Notable achievements or associations
+	•	Short biographical statement: 3–5 sentences
+8.5  Events
+For each event entry:
+	•	Event title
+	•	Date, time, and duration
+	•	Event type: performance / workshop / audition / festival / masterclass
+	•	Venue (or 'Online' if applicable)
+	•	Short description: 2–3 sentences
+	•	Featured disciplines / performers
+	•	Registration or RSVP information
+	•	Event visual / poster
+8.6  Gallery
+	•	Minimum 40 images at launch across all categories
+	•	Category tags: Performances, Classes, Faculty, Events, Campus, Instruments
+	•	All images must be professionally composed or curated — no casual photography
+	•	Videos: minimum 3 performance clips at launch
+	•	Archive label: year and event name for each asset
+8.7  Admissions
+Process Steps
+Inquiry → Review → Audition/Interview → Offer → Enrollment
+Eligibility
+By discipline and level — clearly tabulated
+Documents Required
+Listed clearly per program
+Fee Information
+Full fee schedule or downloadable prospectus
+Academic Calendar
+Batch start dates, term structure
+Contact
+Dedicated admissions contact: name, phone, email
+Form
+Embedded inquiry form with program selector
+8.8  Blog / Cultural Journal (Phase 2)
+Content themes for the journal — each post should serve SEO and cultural authority simultaneously:
+	•	Bengali music heritage — Rabindra Sangeet, Nazrul Geeti, Baul, Kirtan
+	•	Classical dance traditions — Bharatanatyam, Odissi, Manipuri in Bengali context
+	•	Theatre and drama — history of Bengali theatre, contemporary practice
+	•	Instrument spotlights — sitar, tabla, esraj, harmonium — history and technique
+	•	Student resources — practice guides, theory explainers, recital preparation
+	•	Institutional news — faculty achievements, student competitions, events
+	•	Cultural commentary — Bengali arts in contemporary context
+SECTION 09
+Functional Requirements
+9.1  Navigation & Core UX
+	•	Sticky navigation bar — transparent on hero, solid on scroll
+	•	Smooth scroll behaviour — section-based, intentional
+	•	Active section indicator in nav
+	•	Persistent Apply Now CTA in nav bar — always visible
+	•	No-JS fallback for core content — accessibility standard
+	•	404 page — branded, includes search and nav links
+9.2  Performance
+Page Load Speed
+< 3 seconds on 4G mobile (target < 2s)
+Core Web Vitals
+All green — LCP, FID, CLS targets met
+Image Optimisation
+WebP format, lazy loading, responsive srcset
+Caching
+Static assets cached at CDN edge
+Hosting
+CDN-backed, globally distributed
+9.3  Responsive Design
+	•	Mobile-first development — primary design target is 375px viewport
+	•	Breakpoints: mobile (< 768px), tablet (768–1024px), desktop (> 1024px)
+	•	Mobile navigation: slide-in drawer or full-screen overlay — not cramped header
+	•	Thumb-zone optimised CTAs on mobile
+	•	All forms fully functional on mobile with auto-fill support
+	•	Gallery: swipeable on mobile
+9.4  CMS Requirements
+	•	Content management system required — non-technical staff must be able to update
+	•	Must manage: Events, Gallery, Faculty, Blog Posts, Program details
+	•	Image upload with automatic optimisation
+	•	Recommended: Sanity, Contentful, or WordPress with custom theme
+	•	Draft / publish workflow for content approval
+	•	Bengali Unicode text support throughout CMS
+9.5  Forms
+	•	Admissions inquiry form — fields per Section 7.1
+	•	Contact form — name, email, subject, message
+	•	Event registration form (Phase 2)
+	•	Newsletter signup (Phase 2)
+	•	All forms: spam protection (reCAPTCHA or Cloudflare Turnstile)
+	•	All forms: email notification to admissions team on submission
+	•	All forms: auto-confirmation email to submitter
+9.6  SEO Requirements
+	•	Unique meta title and description per page
+	•	Open Graph and Twitter Card meta tags on all pages
+	•	Structured data (Schema.org): EducationalOrganization, Event, Person
+	•	Sitemap.xml — auto-generated and submitted to Google Search Console
+	•	robots.txt — configured correctly
+	•	Bengali-language content indexed correctly — hreflang if multi-language
+	•	Blog posts: Article schema with author, date, category
+	•	Image alt text required on all images
+	•	Canonical URLs on all pages
+9.7  Analytics
+	•	Google Analytics 4 — installed, verified, goal conversions configured
+	•	Goal tracking: form submissions, event registrations, CTA clicks
+	•	Scroll depth tracking — homepage and program pages
+	•	Heatmap tool recommended: Hotjar or Microsoft Clarity
+	•	Google Search Console — verified and sitemap submitted
+9.8  Accessibility
+	•	WCAG 2.1 AA minimum compliance
+	•	Keyboard navigation throughout
+	•	Screen reader compatible — semantic HTML, ARIA labels
+	•	Colour contrast ratios — all text meets minimum 4.5:1
+	•	Focus states visible on all interactive elements
+9.9  Security
+	•	HTTPS everywhere — SSL certificate enforced
+	•	No mixed content warnings
+	•	Form data transmitted securely — never in URL parameters
+	•	GDPR-compliant data handling — privacy policy, consent for forms
+	•	Regular security updates — CMS plugins and dependencies
+9.10  Integrations (Phase 1 + 2)
+Integration
+Phase
+Email service (form notifications)
+Phase 1
+Google Maps embed (Contact page)
+Phase 1
+Google Analytics 4
+Phase 1
+Social media links
+Phase 1
+YouTube embed (Gallery / performance clips)
+Phase 1
+CRM for admissions lead tracking
+Phase 2
+Online payment gateway (fees)
+Phase 2
+Event ticketing integration
+Phase 2
+Live chat / WhatsApp widget
+Phase 2
+SECTION 10
+Success Criteria
+10.1  Launch Readiness Criteria
+The website is considered launch-ready when all of the following are verified:
+	•	All Tier 1 pages are live and fully populated with real content
+	•	All forms are functional and submission notifications are confirmed
+	•	Mobile experience passes manual QA on iOS Safari and Android Chrome
+	•	Page load speed < 3s on 4G mobile (verified via PageSpeed Insights)
+	•	Core Web Vitals: all green in Google Search Console
+	•	No broken links, 404s on linked pages, or missing images
+	•	Analytics tracking verified: pageviews, form submissions, and CTA clicks recording
+	•	SEO: all meta tags, OG tags, sitemap, robots.txt verified
+	•	SSL certificate active and no mixed content warnings
+	•	Accessibility: keyboard navigation functional, no critical WCAG failures
+	•	Bengali text renders correctly across all browsers and devices
+	•	Admissions form tested end-to-end: submission → notification → auto-reply
+10.2  Design Quality Criteria
+Before launch, design must pass the following subjective quality gates — reviewed by a senior decision maker:
+	•	Three-second test: institution identity is clear within 3 seconds on homepage
+	•	Premium perception: site feels like a serious cultural institution, not a generic school
+	•	Emotional resonance: at least one section makes the reviewer feel genuine desire to belong
+	•	Cultural authenticity: Bengali cultural cues are present and feel deliberate, not decorative
+	•	Mobile delight: mobile experience feels like a premium app, not a compressed desktop
+	•	'Shock moments' are present and memorable — there are at least 2 sections that stop the scroll
+10.3  Performance Benchmarks (90-Day Post-Launch)
+Metric
+Target
+Monthly Sessions
+Establish baseline; grow 20% MoM
+Admissions Inquiries via Site
+Measurable — every inquiry tracked
+Bounce Rate (Homepage)
+< 55%
+Average Session Duration
+> 2 minutes
+Mobile Traffic Share
+> 55%
+Organic Traffic (Blog, Phase 2)
+First page impressions within 90 days of posts
+Core Web Vitals
+All green — maintained post-launch
+10.4  Content Quality Standards
+	•	No placeholder text (Lorem Ipsum) anywhere in production
+	•	All images: minimum 1200px wide, high resolution, culturally relevant
+	•	All copy: written in institutional register — authoritative but not cold
+	•	Bengali text: Unicode compliant, rendered in appropriate Bengali script font
+	•	Faculty profiles: every active faculty member has a complete profile
+	•	Programs: every discipline offered has a complete program entry
+10.5  Long-Term Success Definition
+The Kolkata Shrutijatak website will be considered a long-term success when it achieves the following:
+The Digital Institution Standard
+— The website becomes the definitive digital reference for Bengali cultural education — the first result a parent, student, or journalist finds when searching for formal Bengali arts training.
+— Enrollment inquiries are consistently generated through the website without outbound marketing effort.
+— The gallery and blog archive become a genuine cultural resource — referenced, shared, and cited by the Bengali arts community.
+— The institution's digital presence is as prestigious as its physical presence.
+— End of Document —
+Kolkata Shrutijatak · Product Requirements Document · v1.0 · May 2026
+Kolkata Shrutijatak: Product Requirements Document (v1.1)
+Date: May 2026 | Status: Final for Design Phase | Theme: "The Digital Monument"
+01. Visual Language & "Shock" Definitions
+The primary failure point of previous versions was the ambiguity of "futurism." These definitions now enforce a museum-quality aesthetic.
+1.1 Visual System Rules
+•	Negative Space: 85% of the layout must use "White/Bone" or "Deep Charcoal" negative space to ensure an editorial, museum feel.
+•	Color Palette: * Primary: Crimson (Accent only for CTAs/links).
+•	Base: Charcoal Typography on Bone/Off-white backgrounds.
+•	Accents: Warm Gold for micro-details (borders, icons).
+•	Typography: Editorial-grade Serif for Bengali/Headings; Ultra-clean Sans-serif for body text.
+1.2 Defining the "Shock Moments"
+"Shock" does not mean glitch, neon, or complex animation. It means Impact through Scale and Quality.
+	1.	Shock Moment 1 (Hero): A cinematic, high-resolution composition of a single cultural object (e.g., an Esraj or a Sitar) with layered depth (parallax) and sharp, elegant typography.
+	2.	Shock Moment 2 (Immersion): A full-screen, silent, slow-motion video or high-grain archival photograph of a performance, overlaid with a philosophical statement.
+	3.	Shock Moment 3 (Admissions): A high-contrast transition (e.g., flipping from light mode to deep charcoal/gold) to signal the "Invitation to Join."
+02. Institutional Structure & Sitemap
+A scalable architecture designed for trust and SEO.
+2.1 Core Navigation (Phase 1)
+•	Home: The Identity Hub.
+•	About: The Founding Story (Piu Biswas Das).
+•	Programs: The "Product Catalog" of arts (Music, Dance, Drama).
+•	Faculty: Credibility through expert profiles.
+•	Admissions: The Ceremonious Inquiry Engine.
+•	Contact: Global and local accessibility.
+03. Mandatory Asset Manifest
+No AI-generated "ghost" imagery. Every asset must be intentional.
+Category	Required Assets	Quality Standard
+Hero/Objects	Sitar, Esraj, Terracotta motif, Temple geometry, Ghungroo (bells).	Studio lighting, isolated or cinematic depth.
+Portraits	Founder (Piu Biswas Das), Faculty (Headshots).	Serious, authoritative, "Master-class" style lighting.
+Atmosphere	Stage spotlights, manuscript textures, audience silhouettes.	High grain, editorial, premium shadows.
+Archive	40+ images of real classes, rehearsals, and performances.	No casual phone photography; curated only.
+04. Technical & Business Constraints
+Optimized for a zero-cost, high-performance stack.
+•	Performance: < 2s load time on 4G mobile; "All Green" Core Web Vitals.
+•	SEO Moat: Schema.org (EducationalOrganization) and Bengali Unicode indexing.
+•	Zero-Cost CMS (MVP): Utilize Markdown/Content Collections or local JSON files via GitHub-based workflow instead of expensive SaaS CMS.
+•	Conversion: Sticky "Apply Now" (Crimson) must be within thumb-reach on 60%+ of sessions (mobile).
+05. Next Steps for Implementation
+To prevent the "code-first" trap, the following documents must be generated before a single line of CSS is written:
+	1.	Design System v1: Precise spacing scales, typography pairings, and hex codes.
+	2.	Asset Manifest v1: A detailed list of every photograph and SVG required for launch.
+	3.	Homepage Wireframe v1: Low-fidelity layout focusing on the "Impact → Information → Emotion" rhythm.
+	4.	Motion Language v1: Defining the "Slow Reveal" and "Depth Layering" logic (No kinetic chaos).
+Institutional Note: The website is not a brochure; it is a digital monument to Bengali heritage. Every pixel must reflect the weight and future of the institution.
+End of Updated PRD
+

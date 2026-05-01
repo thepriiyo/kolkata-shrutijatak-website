@@ -1,0 +1,449 @@
+KOLKATA SHRUTIJATAK
+INFORMATION ARCHITECTURE V1
+Institutional Website Structural Architecture Version 1.0 — May 2026
+Theme: Apple-grade clarity × Museum editorial sophistication × Bengali heritage × Near-future institutional institution.
+
+01. COMPLETE SITEMAP
+
+TIER 1 — CORE PAGES (LAUNCH CRITICAL)
+
+1. Home
+URL: /
+Purpose: Primary landing experience. Identity + emotional impact + conversion funnel.
+Parent: Root
+Children: None
+
+2. About
+URL: /about
+Purpose: Institution story, founder, philosophy, mission, heritage credibility.
+Parent: Root
+Children: None
+
+3. Programs
+URL: /programs
+Purpose: Primary offering catalogue.
+Parent: Root
+Children: Program detail pages
+
+Program Detail Pages
+
+Rabindra Sangeet
+URL: /programs/rabindra-sangeet
+Purpose: Program detail.
+Parent: Programs
+
+Music
+URL: /programs/music
+
+Dance
+URL: /programs/dance
+
+Drama
+URL: /programs/drama
+
+Heritage Arts
+URL: /programs/heritage-arts
+
+4. Faculty
+URL: /faculty
+Purpose: Trust and credibility.
+Children: Faculty profiles
+
+Faculty Profile
+URL: /faculty/[faculty-name]
+Examples:
+	•	/faculty/piu-biswas-das
+Purpose: Individual faculty authority pages.
+
+5. Events
+URL: /events
+Purpose: Community and institutional activity.
+Children: Event detail pages
+
+Event Detail
+URL: /events/[event-slug]
+Example: /events/rabindra-jayanti-2026
+
+6. Gallery
+URL: /gallery
+Purpose: Visual proof + emotional immersion.
+Children: Optional gallery categories.
+
+7. Admissions
+URL: /admissions
+Purpose: Primary conversion engine.
+Children: None
+
+8. Contact
+URL: /contact
+Purpose: Reachability and trust.
+Children: None
+
+TIER 2 — SECONDARY PAGES
+
+9. Journal
+URL: /journal
+Purpose: SEO moat + cultural authority.
+Children: Blog posts
+
+Blog Post
+URL: /journal/[slug]
+Example: /journal/history-of-rabindra-sangeet
+
+10. FAQ
+URL: /faq
+Purpose: Reduce admissions friction.
+
+11. Testimonials / Alumni
+URL: /testimonials
+Purpose: Social proof.
+
+TIER 3 — SUPPORTING PAGES
+
+Privacy
+/privacy-policy
+Terms
+/terms
+404
+/404
+
+02. PAGE HIERARCHY
+
+Home /
+→ About /about
+→ Programs /programs  → Program Detail /programs/[slug]   → Admissions /admissions
+→ Faculty /faculty  → Faculty Detail /faculty/[slug]
+→ Events /events  → Event Detail /events/[slug]
+→ Gallery /gallery
+→ Admissions /admissions
+→ Contact /contact
+→ Journal /journal  → Article /journal/[slug]
+→ FAQ /faq
+→ Testimonials /testimonials
+
+03. SECTION HIERARCHY PER PAGE
+
+HOME PAGE
+
+1. Hero
+Purpose: Immediate identity.
+Content:
+	•	institution name
+	•	Bengali name
+	•	positioning statement
+	•	2 CTAs
+CTA: Apply Now / Explore Programs
+
+2. Institutional Introduction
+Purpose: Explain what the institution is.
+Content:
+	•	mission
+	•	short philosophy
+	•	founder preview
+CTA: About Institution
+
+3. Programs Preview
+Purpose: Show offerings.
+Content: Program cards.
+CTA: Explore Programs
+
+4. Cultural Immersion
+Purpose: Emotional scroll stop.
+Content: Large image/video + statement.
+CTA: None
+
+5. Faculty Preview
+Purpose: Trust.
+Content: Featured faculty.
+CTA: Meet Faculty
+
+6. Events Preview
+Purpose: Current activity.
+Content: Upcoming events.
+CTA: View Events
+
+7. Testimonials
+Purpose: Social proof.
+Content: Student stories.
+CTA: Read More
+
+8. Gallery Preview
+Purpose: Visual proof.
+Content: Grid preview.
+CTA: Explore Gallery
+
+9. Admissions CTA
+Purpose: Final conversion.
+Content: Invitation.
+CTA: Begin Application
+
+10. Footer
+
+ABOUT PAGE
+
+	•	About Hero
+	•	Founding Story
+	•	Founder Section
+	•	Mission
+	•	Vision
+	•	Philosophy
+	•	Why It Matters
+	•	CTA to Admissions
+
+PROGRAMS PAGE
+
+	•	Programs Hero
+	•	Program Grid
+	•	Discipline Overview
+	•	Why Study Here
+	•	Program Comparison
+	•	CTA Apply
+
+PROGRAM DETAIL PAGE
+
+	•	Program Hero
+	•	Overview
+	•	Curriculum
+	•	Outcomes
+	•	Duration
+	•	Levels
+	•	Eligibility
+	•	Schedule
+	•	Fees
+	•	Faculty
+	•	FAQ
+	•	Apply CTA
+
+FACULTY PAGE
+
+	•	Faculty Hero
+	•	Faculty Grid
+	•	Teaching Philosophy
+	•	CTA Apply
+
+FACULTY PROFILE
+
+	•	Portrait Hero
+	•	Biography
+	•	Credentials
+	•	Experience
+	•	Programs taught
+	•	CTA Apply
+
+EVENTS PAGE
+
+	•	Events Hero
+	•	Upcoming Events
+	•	Past Events Archive
+	•	Registration CTA
+
+EVENT DETAIL PAGE
+
+	•	Event Hero
+	•	Details
+	•	Schedule
+	•	Registration
+	•	Gallery Preview
+
+GALLERY PAGE
+
+	•	Gallery Hero
+	•	Filter Categories
+	•	Masonry Grid
+	•	Video Section
+
+ADMISSIONS PAGE
+
+	•	Admissions Hero
+	•	Why Join
+	•	Process Steps
+	•	Eligibility
+	•	Documents
+	•	Fee Info
+	•	Batch Calendar
+	•	Form
+	•	FAQ
+CTA: Submit Inquiry
+
+CONTACT PAGE
+
+	•	Contact Hero
+	•	Contact Info
+	•	Map
+	•	Contact Form
+	•	Social Links
+
+04. HOMEPAGE INFORMATION FLOW
+
+Hero Impact ↓ Institution Identity ↓ Programs Preview ↓ Cultural Emotion ↓ Faculty Trust ↓ Events Activity ↓ Testimonials Proof ↓ Gallery Atmosphere ↓ Admissions Conversion
+
+Flow: Impact → Identity → Programs → Emotion → Trust → Social Proof → Conversion
+
+05. USER FLOW ARCHITECTURE
+
+A. New Visitor
+Home → Understand institution → Explore programs → Trust via faculty/gallery → Admissions
+
+B. Parent
+Home → Programs → Faculty → Testimonials → Admissions
+
+C. Student
+Home → Programs → Program Detail → Gallery → Apply
+
+D. Event Visitor
+Home → Events → Event Detail → Register
+
+E. Collaborator / Media
+Home → About → Faculty → Contact
+
+06. NAVIGATION LOGIC
+
+Desktop Navbar
+Items:
+	•	Home
+	•	About
+	•	Programs
+	•	Faculty
+	•	Events
+	•	Gallery
+	•	Admissions
+	•	Contact
+CTA: Apply Now
+Sticky: Yes
+
+Mobile Nav
+Fullscreen drawer.
+Large touch targets.
+CTA pinned.
+
+Footer Nav
+Grouped: Institution Programs Admissions Contact
+
+07. INTERNAL LINKING SYSTEM
+
+Programs → Admissions Programs → Faculty
+Faculty → Programs Faculty → Admissions
+Events → Gallery Events → Contact
+Gallery → Admissions
+Blog → Programs Blog → Faculty
+About → Admissions
+Homepage → everything
+
+08. CONVERSION PATHWAYS
+
+Primary
+
+Admissions Inquiry
+Locations:
+	•	Hero
+	•	Nav
+	•	Programs
+	•	Program Detail
+	•	Admissions page
+	•	Footer
+
+Apply Now
+Sticky everywhere.
+
+Secondary
+
+Contact Form
+Contact page + footer
+
+Event Registration
+Events pages
+
+Newsletter
+Footer + Journal
+
+Social Follow
+Footer + Contact
+
+09. CONTENT OWNERSHIP MAP
+
+Homepage
+Preview content only.
+No full content dumps.
+
+About
+Institution story.
+
+Programs
+Program summaries only.
+
+Program Detail
+Full curriculum.
+
+Faculty
+Overview grid.
+
+Faculty Detail
+Full bios.
+
+Events
+Listings.
+
+Event Detail
+Full info.
+
+Gallery
+Visual archive.
+
+Admissions
+Operational conversion info.
+
+Journal
+SEO + thought leadership.
+
+10. PRIORITY MATRIX
+
+TIER 1 (Launch)
+	•	Home
+	•	About
+	•	Programs
+	•	Faculty
+	•	Admissions
+	•	Contact
+	•	Gallery
+	•	Events
+
+TIER 2
+	•	Journal
+	•	FAQ
+	•	Testimonials
+	•	Individual detail pages
+
+TIER 3
+	•	Newsletter
+	•	CRM integrations
+	•	Payment
+	•	Advanced filters
+
+11. INFORMATION ARCHITECTURE RULES
+
+	•	Admissions reachable within 1 click.
+	•	No page deeper than 3 clicks.
+	•	Homepage previews only.
+	•	Program details separated from listing.
+	•	Faculty authority isolated into profiles.
+	•	Events are always current or archived.
+	•	Gallery is visual-first.
+	•	Contact always accessible.
+	•	Apply CTA always visible.
+	•	Mobile nav simplified.
+	•	Internal links reinforce SEO clusters.
+	•	Journal supports authority growth.
+	•	No dead-end pages.
+	•	Every page has a CTA.
+	•	Conversion never hidden.
+
+SYSTEM SUMMARY
+This IA creates:
+	•	clear discovery
+	•	high trust
+	•	emotional resonance
+	•	SEO scalability
+	•	conversion funnel
+without bloating the homepage into a digital traffic jam.
+
+

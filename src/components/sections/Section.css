@@ -1,0 +1,433 @@
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.section-text {
+  max-width: 560px;
+}
+
+.section-visual {
+  width: 100%;
+}
+
+.main-portrait {
+  aspect-ratio: 4/5;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.main-portrait::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.15) 100%);
+  pointer-events: none;
+}
+
+/* ==============================
+   PROGRAM / CARD GRID
+   ============================== */
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.program-card {
+  background: var(--pure-white);
+  padding: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-premium), box-shadow 0.5s var(--ease-premium), border-color 0.5s var(--ease-premium);
+  border: 1px solid var(--light-gray);
+}
+
+/* Proximity Awareness */
+.program-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 0 40px rgba(184, 154, 99, calc(var(--proximity, 0) * 0.08));
+}
+
+/* Hover: max 3px lift per user rule */
+.program-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  border-color: rgba(140, 29, 44, 0.15);
+  transition: transform 0.6s var(--ease-emphasis), box-shadow 0.6s var(--ease-emphasis), border-color 0.6s var(--ease-emphasis);
+}
+
+/* Exit transition */
+.program-card {
+  transition: transform 0.8s var(--ease-exit), box-shadow 0.8s var(--ease-exit), border-color 0.8s var(--ease-exit);
+}
+
+/* Image zoom on card hover — 3% */
+.program-card:hover .program-image img {
+  transform: scale(1.03);
+}
+
+.program-image {
+  height: 240px;
+  overflow: hidden;
+}
+
+.program-content {
+  padding: 32px;
+}
+
+.faculty-image {
+  aspect-ratio: 1/1;
+  height: auto;
+}
+
+.program-content h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+/* Faculty-specific hover — name to crimson */
+.faculty-card:hover .program-content h3 {
+  color: var(--primary-crimson);
+}
+
+/* ==============================
+   STAGGER CHILDREN IN REVEALED CONTAINERS
+   Children of .reveal.revealed inherit the stagger delays
+   ============================== */
+
+.reveal .reveal-delay-1,
+.reveal .reveal-delay-2,
+.reveal .reveal-delay-3,
+.reveal .reveal-delay-4,
+.reveal .reveal-delay-5 {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s var(--ease-premium), transform 0.8s var(--ease-premium);
+}
+
+.reveal.revealed .reveal-delay-1,
+.reveal.revealed .reveal-delay-2,
+.reveal.revealed .reveal-delay-3,
+.reveal.revealed .reveal-delay-4,
+.reveal.revealed .reveal-delay-5 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image scale settle in revealed containers */
+.reveal.revealed .reveal-scale {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 1024px) {
+  .section-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+  
+  .section-text {
+    order: 2;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section-visual {
+    order: 1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 640px) {
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faculty-image {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* ==============================
+   GALLERY GRID
+   ============================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  gap: 20px;
+  transition: all 0.6s var(--ease-premium);
+}
+
+/* Gallery Spotlight Effect */
+.gallery-grid:hover .gallery-item:not(:hover) {
+  filter: brightness(0.9) saturate(0.8);
+  opacity: 0.7;
+}
+
+.gallery-item {
+  transition: filter 0.6s var(--ease-premium), opacity 0.6s var(--ease-premium), transform 0.6s var(--ease-premium);
+}
+
+.gallery-item:hover {
+  filter: brightness(1.02);
+  z-index: 10;
+}
+
+.gallery-item.col-1 { grid-column: span 1; }
+.gallery-item.col-2 { grid-column: span 2; }
+.gallery-item.col-3 { grid-column: span 3; }
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 250px;
+  }
+  .gallery-item.col-1, 
+  .gallery-item.col-2, 
+  .gallery-item.col-3 { 
+    grid-column: span 1; 
+  }
+}
+
+.bg-warm {
+  background-color: var(--warm-ivory);
+  position: relative;
+}
+
+.bg-warm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.01;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ==============================
+   CULTURAL IMMERSION (Shock Moment 2)
+   ============================== */
+
+.cultural-immersion {
+  position: relative;
+  height: 60vh;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--deep-charcoal);
+  overflow: hidden;
+}
+
+.immersion-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.immersion-texture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.05;
+  filter: grayscale(1) brightness(0.8);
+  transition: opacity 2s var(--ease-premium), filter 2s var(--ease-premium);
+}
+
+.cultural-immersion.revealed .immersion-texture {
+  opacity: 0.15;
+  filter: grayscale(1) brightness(1.1);
+}
+
+.immersion-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, var(--deep-charcoal) 80%);
+}
+
+.immersion-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+}
+
+.immersion-statement h2 {
+  line-height: 1.3;
+}
+
+/* Quote breathing reveal — slow scale settle */
+.immersion-quote {
+  font-size: clamp(22px, 6.5vw, 72px);
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+.word-reveal {
+  display: inline-block;
+  white-space: pre;
+  vertical-align: baseline;
+}
+
+
+.reveal .word-reveal {
+  transform: translateY(8px);
+  transition: opacity 0.8s var(--ease-enter), transform 0.8s var(--ease-enter);
+}
+
+/* ==============================
+   ADMISSIONS (Shock Moment 3)
+   ============================== */
+
+.admissions-section {
+  background-color: var(--bone-white);
+  padding: 60px 0;
+}
+
+.admissions-card {
+  background-color: var(--deep-charcoal);
+  padding: 80px 40px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+}
+
+
+/* Gold Consecration Trace */
+.admissions-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.admissions-card.revealed::before {
+  animation: borderTrace 1.8s var(--ease-emphasis) forwards 0.3s;
+}
+
+@keyframes borderTrace {
+  0% {
+    clip-path: inset(0 100% 100% 0);
+    border-color: var(--heritage-gold);
+  }
+  25% {
+    clip-path: inset(0 0 100% 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    border-color: var(--heritage-gold);
+  }
+}
+
+/* Simpler trace via background if clip-path is tricky, but let's try clip-path first */
+/* Actually, a better trace for a full rectangle is 4 segments. Let's use a simplified fade-in trace. */
+
+.admissions-card.revealed {
+  border-color: rgba(184, 154, 99, 0.3);
+  transition: border-color 1.5s var(--ease-premium) 0.5s;
+}
+
+.admissions-actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Gold secondary button hover */
+.admissions-actions .btn-secondary:hover {
+  background-color: rgba(184, 154, 99, 0.1);
+  border-color: var(--heritage-gold);
+}
+
+/* Ceremonial CTA Breathing Pulse */
+.admissions-card.revealed .btn-primary {
+  animation: ctaPulse 4s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184, 154, 99, 0); }
+  50% { box-shadow: 0 0 0 12px rgba(184, 154, 99, 0.08); }
+}
+
+@media (max-width: 768px) {
+  .admissions-card {
+    padding: 60px 20px;
+  }
+  .admissions-actions {
+    flex-direction: column;
+  }
+}
+
+/* ==============================
+   REDUCED MOTION
+   ============================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal > .reveal-delay-1,
+  .reveal > .reveal-delay-2,
+  .reveal > .reveal-delay-3,
+  .reveal > .reveal-delay-4,
+  .reveal > .reveal-delay-5 {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .program-card {
+    transition: none;
+  }
+
+  .program-card:hover {
+    transform: none;
+  }
+}
