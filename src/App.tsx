@@ -9,7 +9,6 @@ import EventsPreview from './components/sections/EventsPreview';
 import GalleryPreview from './components/sections/GalleryPreview';
 import Contact from './components/sections/Contact';
 import Footer from './components/layout/Footer';
-import { useScrollReveal } from './hooks/useScrollReveal';
 import { useScrollProgress } from './hooks/useScrollProgress';
 
 function App() {
