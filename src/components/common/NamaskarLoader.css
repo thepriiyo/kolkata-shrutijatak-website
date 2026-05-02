@@ -23,13 +23,14 @@
   pointer-events: none;
 }
 
-.namaskar-hands-wrapper {
-  position: relative;
-  width: 380px; /* Slightly larger for impact */
-  max-width: 85vw;
-  margin-bottom: 30px;
+/* Initial states for gated reveal */
+.namaskar-hands-wrapper,
+.namaskar-text {
   opacity: 0;
   transform: translateY(15px);
+}
+
+.namaskar-portal.ready .namaskar-hands-wrapper {
   animation: namaskarEntrance 1s var(--ease-premium) forwards;
 }
 
@@ -46,13 +47,15 @@
 
 .namaskar-text {
   font-family: 'Hind Siliguri', sans-serif;
-  font-size: 48px; /* Larger for authority */
+  font-size: 48px; 
   font-weight: 600;
   color: var(--primary-crimson);
-  opacity: 0;
   letter-spacing: 0.15em;
-  animation: textMaterialize 1.2s var(--ease-premium) 0.5s forwards;
   position: relative;
+}
+
+.namaskar-portal.ready .namaskar-text {
+  animation: textMaterialize 1.2s var(--ease-premium) 0.5s forwards;
 }
 
 @keyframes textMaterialize {
