@@ -1,92 +1,107 @@
 .brand-logo-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   aspect-ratio: 16/9;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  overflow: visible; /* Allow parallax to breathe */
+  perspective: 1200px;
 }
 
 .logo-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+  transform-style: preserve-3d;
 }
 
-.logo-artwork {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  
-  /* Initial state */
-  opacity: 0;
-  transform: scale(0.99);
-  transition: opacity 2s var(--ease-premium), transform 2s var(--ease-premium);
-}
-
-.revealed .logo-artwork {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Specific reveal for the Moon */
-.logo-moon {
-  position: absolute;
-  top: 15%;
-  right: 15%;
-  width: 12%;
-  aspect-ratio: 1/1;
-  background-color: var(--pure-white);
-  border-radius: 50%;
-  filter: blur(20px);
-  opacity: 0;
-  z-index: 1;
-  transition: opacity 1.5s var(--ease-premium) 0.8s, filter 1.5s var(--ease-premium) 0.8s;
-}
-
-.revealed .logo-moon {
-  opacity: 0.15;
-  filter: blur(8px);
-}
-
-/* Drawing Effect via Clip-Path */
-.logo-artwork-mask {
-  width: 100%;
-  height: 100%;
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 2.5s var(--ease-premium) 0.5s;
-}
-
-.revealed .logo-artwork-mask {
-  clip-path: inset(0 0 0 0);
-}
-
-/* Atmosphere Glow */
-.logo-atmosphere {
+/* Layer 1: Crimson Soul Aura */
+.logo-aura {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  width: 60%;
-  height: 60%;
+  width: 70%;
+  height: 70%;
+  transform: translate(-50%, -50%);
   background: radial-gradient(circle, var(--primary-crimson) 0%, transparent 70%);
   opacity: 0;
-  filter: blur(40px);
-  transition: opacity 3s var(--ease-premium) 1.2s, transform 3s var(--ease-premium) 1.2s;
+  filter: blur(80px);
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 4s var(--ease-premium) 0.2s;
+}
+
+.revealed .logo-aura {
+  opacity: 0.35; /* Increased intensity for volumetric depth */
+  animation: auraBreath 8s var(--ease-premium) infinite alternate;
+}
+
+@keyframes auraBreath {
+  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.2; }
+  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.4; }
+}
+
+/* Layer 2: The Tree Artwork */
+.logo-artwork-parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  transition: transform 0.15s ease-out; /* Sharper mouse tracking */
+}
+
+.logo-artwork-reveal-mask {
+  width: 100%;
+  height: 100%;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 3.5s var(--ease-premium) 0.5s;
+}
+
+.revealed .logo-artwork-reveal-mask {
+  clip-path: inset(0 0 0 0);
+}
+
+.logo-artwork-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(0.99);
+  transition: opacity 2.5s var(--ease-premium) 0.5s, transform 3s var(--ease-premium) 0.5s;
+  /* Glow/Shimmer effect for gold lines and shadow for legibility */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 0 2px rgba(212, 175, 55, 0.3));
+}
+
+.revealed .logo-artwork-img {
+  opacity: 1;
+  transform: scale(1);
+  animation: goldShimmer 12s var(--ease-premium) infinite alternate;
+}
+
+@keyframes goldShimmer {
+  0% { filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.3)); }
+  100% { filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.6)); }
+}
+
+/* Layer 4: Typography Shadowing (Invisible layer to add punch to text) */
+.logo-typography-parallax {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 20%;
+  z-index: 4;
   pointer-events: none;
 }
 
-.revealed .logo-atmosphere {
-  opacity: 0.05;
-  transform: translate(-50%, -50%) scale(1);
-}
-
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .brand-logo-container {
     max-width: 100%;
+    aspect-ratio: 4/3;
   }
 }
