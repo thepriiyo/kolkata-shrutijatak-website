@@ -23,6 +23,14 @@
   pointer-events: none;
 }
 
+.namaskar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* Initial states for gated reveal */
 .namaskar-hands-wrapper,
 .namaskar-text {
