@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -78,18 +78,17 @@ const ParamparaThread = () => {
         ref={pathRef}
         d="M 40 0 L 40 10000"
         stroke="var(--heritage-gold)"
-        strokeWidth="1.5"
+        strokeWidth="2.5" /* Increased for authority */
         strokeLinecap="round"
-        opacity="0.3"
+        opacity="0.8" /* Increased for visibility */
       />
 
-      {/* Branch Markers (Conceptual - manual placement for key sections) */}
-      {/* These will be refined in CSS/layout later */}
-      <line x1="40" y1="1200" x2="60" y2="1200" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="1" />
-      <line x1="40" y1="2800" x2="60" y2="2800" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="1" />
-      <line x1="40" y1="4500" x2="60" y2="4500" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="1" />
-      <line x1="40" y1="6500" x2="60" y2="6500" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="1" />
-      <line x1="40" y1="8200" x2="60" y2="8200" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="1" />
+      {/* Branch Markers */}
+      <line x1="40" y1="1200" x2="65" y2="1200" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="2" />
+      <line x1="40" y1="2800" x2="65" y2="2800" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="2" />
+      <line x1="40" y1="4500" x2="65" y2="4500" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="2" />
+      <line x1="40" y1="6500" x2="65" y2="6500" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="2" />
+      <line x1="40" y1="8200" x2="65" y2="8200" className="parampara-branch" stroke="var(--heritage-gold)" strokeWidth="2" />
     </svg>
   );
 };

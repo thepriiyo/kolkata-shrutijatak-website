@@ -125,14 +125,14 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0; /* Above the background color, below content */
   background: radial-gradient(
-    ellipse at 30% 40%,
-    rgba(248, 245, 240, 0.4) 0%,
-    transparent 70%
+    ellipse at 25% 35%,
+    rgba(184, 154, 99, 0.18) 0%, /* Visible Gold Harmonic */
+    transparent 65%
   );
-  animation: tanpura-sa 32s ease-in-out infinite alternate;
-  opacity: 0.5;
+  animation: tanpura-sa 40s ease-in-out infinite alternate;
+  opacity: 1;
 }
 
 /* Tanpura: Pa (Fifth — 3:2 Ratio) */
@@ -141,14 +141,14 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -2;
+  z-index: 0;
   background: radial-gradient(
-    ellipse at 70% 60%,
-    rgba(245, 240, 232, 0.3) 0%,
+    ellipse at 75% 65%,
+    rgba(184, 154, 99, 0.15) 0%,
     transparent 60%
   );
-  animation: tanpura-pa 21s ease-in-out infinite alternate; /* ~32 * 2/3 */
-  opacity: 0.4;
+  animation: tanpura-pa 26s ease-in-out infinite alternate;
+  opacity: 1;
 }
 
 @keyframes tanpura-sa {

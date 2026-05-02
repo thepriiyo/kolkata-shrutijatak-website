@@ -1,11 +1,11 @@
 .parampara-thread-system {
-  position: absolute;
+  position: fixed; /* Must be fixed to trace the entire journey */
   top: 0;
   left: 0;
   width: 80px;
-  height: 100%;
+  height: 100vh;
   pointer-events: none;
-  z-index: 100;
+  z-index: 50; /* Above atmosphere and content, below top nav */
   opacity: 1;
 }
 

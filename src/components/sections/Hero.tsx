@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
@@ -36,8 +36,6 @@ const Hero: React.FC<HeroProps> = ({ forceReveal }) => {
     // 2. TIMELINE CONSTRUCTION
     const ctx = gsap.context(() => {
       const isDesktop = window.innerWidth > 1024;
-      const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
-      const isMobile = window.innerWidth <= 768;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       const tl = gsap.timeline({
