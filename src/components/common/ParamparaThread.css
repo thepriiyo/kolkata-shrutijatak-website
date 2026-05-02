@@ -1,0 +1,21 @@
+.parampara-thread-system {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 1;
+}
+
+.parampara-branch {
+  transform-origin: left;
+  transition: opacity 1.2s var(--ease-premium);
+}
+
+@media (max-width: 1024px) {
+  .parampara-thread-system {
+    display: none;
+  }
+}

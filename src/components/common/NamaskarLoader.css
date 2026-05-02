@@ -1,0 +1,98 @@
+/* ==============================
+   NAMASKAR LOADER (Ceremony)
+   ============================== */
+
+.namaskar-portal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bone-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s var(--ease-premium), transform 0.8s var(--ease-premium);
+}
+
+.namaskar-portal.fading {
+  opacity: 0;
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.namaskar-hands-wrapper {
+  position: relative;
+  width: 380px; /* Slightly larger for impact */
+  max-width: 85vw;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: namaskarEntrance 1s var(--ease-premium) forwards;
+}
+
+@keyframes namaskarEntrance {
+  0% { opacity: 0; transform: translateY(15px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.namaskar-hands-img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 15px 40px rgba(0,0,0,0.08));
+}
+
+.namaskar-text {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 48px; /* Larger for authority */
+  font-weight: 600;
+  color: var(--primary-crimson);
+  opacity: 0;
+  letter-spacing: 0.15em;
+  animation: textMaterialize 1.2s var(--ease-premium) 0.5s forwards;
+  position: relative;
+}
+
+@keyframes textMaterialize {
+  0% { opacity: 0; transform: translateY(10px); filter: blur(5px); }
+  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+/* Shimmering Gold Reveal for the Text */
+.namaskar-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.4),
+    transparent
+  );
+  animation: textShimmer 3s var(--ease-premium) 1.2s infinite;
+}
+
+@keyframes textShimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Atmospheric Greeting Pulse */
+.namaskar-portal::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(138, 27, 39, 0.03) 0%, transparent 70%);
+  animation: greetingPulse 3s var(--ease-premium) infinite alternate;
+}
+
+@keyframes greetingPulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.1); opacity: 1; }
+}

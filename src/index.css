@@ -109,3 +109,19 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* Ceremony Reveal System */
+.main-content-system {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s var(--ease-premium);
+}
+
+.main-content-system.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-content-system.hidden {
+  display: none;
+}

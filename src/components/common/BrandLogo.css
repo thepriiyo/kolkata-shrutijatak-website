@@ -1,107 +1,87 @@
 .brand-logo-container {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   aspect-ratio: 16/9;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: visible; /* Allow parallax to breathe */
-  perspective: 1200px;
+  overflow: visible;
+  will-change: transform, opacity;
 }
 
-.logo-wrapper {
+.logo-artwork-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
-}
-
-/* Layer 1: Crimson Soul Aura */
-.logo-aura {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70%;
-  height: 70%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, var(--primary-crimson) 0%, transparent 70%);
-  opacity: 0;
-  filter: blur(80px);
-  z-index: 1;
-  pointer-events: none;
-  transition: opacity 4s var(--ease-premium) 0.2s;
-}
-
-.revealed .logo-aura {
-  opacity: 0.35; /* Increased intensity for volumetric depth */
-  animation: auraBreath 8s var(--ease-premium) infinite alternate;
-}
-
-@keyframes auraBreath {
-  0% { transform: translate(-50%, -50%) scale(0.85); opacity: 0.2; }
-  100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.4; }
-}
-
-/* Layer 2: The Tree Artwork */
-.logo-artwork-parallax {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  transition: transform 0.15s ease-out; /* Sharper mouse tracking */
-}
-
-.logo-artwork-reveal-mask {
-  width: 100%;
-  height: 100%;
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 3.5s var(--ease-premium) 0.5s;
-}
-
-.revealed .logo-artwork-reveal-mask {
-  clip-path: inset(0 0 0 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }
 
 .logo-artwork-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
-  transform: scale(0.99);
-  transition: opacity 2.5s var(--ease-premium) 0.5s, transform 3s var(--ease-premium) 0.5s;
-  /* Glow/Shimmer effect for gold lines and shadow for legibility */
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) drop-shadow(0 0 2px rgba(212, 175, 55, 0.3));
+  
+  /* The Gilded Filter Chain */
+  filter: 
+    blur(calc(20px * (1 - var(--logo-progress, 0))))
+    sepia(0.8) 
+    saturate(1.8) 
+    hue-rotate(-10deg) 
+    brightness(1.1) 
+    contrast(1.05)
+    drop-shadow(0 0 calc(20px * var(--logo-progress, 0)) rgba(212, 175, 55, 0.3));
+    
+  will-change: filter;
 }
 
-.revealed .logo-artwork-img {
-  opacity: 1;
-  transform: scale(1);
-  animation: goldShimmer 12s var(--ease-premium) infinite alternate;
-}
-
-@keyframes goldShimmer {
-  0% { filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.3)); }
-  100% { filter: drop-shadow(0 0 4px rgba(212, 175, 55, 0.6)); }
-}
-
-/* Layer 4: Typography Shadowing (Invisible layer to add punch to text) */
-.logo-typography-parallax {
+/* Supplemental Gold Sheen */
+.logo-gold-overlay {
   position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 20%;
-  z-index: 4;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.05) 50%,
+    transparent 100%
+  );
+  mix-blend-mode: color-dodge;
   pointer-events: none;
+  opacity: var(--logo-progress, 0);
+  transition: opacity 0.4s ease;
 }
 
-/* Responsive adjustments */
+.logo-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%; /* Increased for softer spread */
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle, 
+    rgba(184, 154, 99, 0.12) 0%, /* Heritage Gold instead of Maroon */
+    transparent 70%
+  );
+  opacity: var(--logo-progress, 0);
+  filter: blur(100px); /* Increased blur for institutional subtlety */
+  z-index: 1;
+  pointer-events: none;
+  animation: auraBreathe 12s infinite alternate ease-in-out;
+}
+
+@keyframes auraBreathe {
+  0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.1; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
+}
+
 @media (max-width: 1024px) {
   .brand-logo-container {
     max-width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: auto; /* Let the artifact define its height on mobile */
   }
 }

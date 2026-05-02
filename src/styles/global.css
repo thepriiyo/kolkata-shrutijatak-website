@@ -39,6 +39,46 @@
   --ease-enter: cubic-bezier(0.0, 0.0, 0.2, 1);
   --ease-exit: cubic-bezier(0.4, 0.0, 1, 1);
   --ease-emphasis: cubic-bezier(0.0, 0.0, 0.1, 1);
+
+  /* Raga Hora — Atmosphere Engine Tokens (Initial) */
+  --hora-bg: var(--bone-white);
+  --hora-warmth: 0.1;
+  --hora-shadow-depth: 1;
+  --hora-grain-opacity: 0.015;
+  --hora-crimson: var(--primary-crimson);
+}
+
+/* Raga Hora States — Subconscious shifts */
+.raga-bhairav { /* Dawn: Clear, Awakening */
+  --hora-bg: #F8F5F0;
+  --hora-warmth: 0.08;
+  --hora-shadow-depth: 0.85;
+  --hora-grain-opacity: 0.012;
+  --hora-crimson: #8C1D2C;
+}
+
+.raga-bilawal { /* Day: Neutral, Institutional */
+  --hora-bg: #F8F5F0;
+  --hora-warmth: 0;
+  --hora-shadow-depth: 1;
+  --hora-grain-opacity: 0.015;
+  --hora-crimson: #8C1D2C;
+}
+
+.raga-yaman { /* Dusk: Contemplative, Soft Gold */
+  --hora-bg: #F5F0E8;
+  --hora-warmth: 0.35;
+  --hora-shadow-depth: 1.15;
+  --hora-grain-opacity: 0.018;
+  --hora-crimson: #7A1825;
+}
+
+.raga-malkauns { /* Night: Deep Gold, Intimate */
+  --hora-bg: #F0EDE5;
+  --hora-warmth: 0.45; /* Stronger warmth for 'Gold' feel */
+  --hora-shadow-depth: 1.4;
+  --hora-grain-opacity: 0.022;
+  --hora-crimson: #6B1320;
 }
 
 /* Reset & Base */
@@ -56,16 +96,69 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bone-white);
-  /* Atmosphere Warmth Shift: 0 → 1 maps to #F8F5F0 → #F5F0E8 */
-  background-image: linear-gradient(
-    rgba(245, 240, 232, var(--atmosphere-warmth, 0)),
-    rgba(245, 240, 232, var(--atmosphere-warmth, 0))
-  );
+  background-color: var(--hora-bg);
   color: var(--deep-charcoal);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color 0.8s var(--ease-premium);
+  transition: background-color 1.2s var(--ease-premium);
+}
+
+/* ==============================
+   ATMOSPHERE: THE TANPURA FIELD
+   Continuous, harmonic visual drone.
+   ============================== */
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  /* Atmosphere warmth shift overlay */
+  background-image: linear-gradient(
+    rgba(184, 154, 99, calc(var(--hora-warmth) * 0.1)),
+    rgba(184, 154, 99, calc(var(--hora-warmth) * 0.1))
+  );
+  transition: background-image 1.2s var(--ease-premium);
+}
+
+/* Tanpura: Sa (Fundamental) */
+.app-wrapper::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at 30% 40%,
+    rgba(248, 245, 240, 0.4) 0%,
+    transparent 70%
+  );
+  animation: tanpura-sa 32s ease-in-out infinite alternate;
+  opacity: 0.5;
+}
+
+/* Tanpura: Pa (Fifth — 3:2 Ratio) */
+.app-wrapper::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background: radial-gradient(
+    ellipse at 70% 60%,
+    rgba(245, 240, 232, 0.3) 0%,
+    transparent 60%
+  );
+  animation: tanpura-pa 21s ease-in-out infinite alternate; /* ~32 * 2/3 */
+  opacity: 0.4;
+}
+
+@keyframes tanpura-sa {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(2%, 1%) scale(1.05); }
+}
+
+@keyframes tanpura-pa {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-1%, -2%) scale(1.03); }
 }
 
 /* Typography Scale */
@@ -73,11 +166,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   line-height: 1.1;
   font-weight: 400;
+  text-wrap: balance;
 }
 
 h1 { 
   font-size: clamp(44px, 8vw, 110px); 
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 h2 { 
@@ -94,6 +188,7 @@ p {
   font-size: 16px;
   color: var(--soft-charcoal);
   max-width: 72ch;
+  font-feature-settings: 'liga' 1, 'kern' 1;
 }
 
 .bengali {
@@ -104,7 +199,7 @@ p {
 .light { color: var(--bone-white); }
 .muted { color: var(--muted-gray); }
 .gold { color: var(--heritage-gold); }
-.crimson { color: var(--primary-crimson); }
+.crimson { color: var(--hora-crimson); }
 .white { color: var(--pure-white); }
 
 
@@ -159,11 +254,46 @@ p {
 }
 
 /* ==============================
+   ALAP → JOD → GAT PACING
+   Institutional performance architecture.
+   ============================== */
+
+/* Phase: Alap (Meditative, Slow) */
+.phase-alap .reveal { 
+  transition-duration: 1.6s; 
+}
+.phase-alap .reveal-delay-1 { transition-delay: 0.15s; }
+.phase-alap .reveal-delay-2 { transition-delay: 0.3s; }
+.phase-alap .section-padding { padding: 140px 0; }
+
+/* Phase: Jod (Rhythmic, Structured) */
+.phase-jod .reveal { 
+  transition-duration: 1.2s; 
+}
+.phase-jod .reveal-delay-1 { transition-delay: 0.1s; }
+.phase-jod .reveal-delay-2 { transition-delay: 0.2s; }
+.phase-jod .section-padding { padding: 100px 0; }
+
+/* Phase: Gat (Compositional, Dynamic) */
+.phase-gat .reveal { 
+  transition-duration: 0.8s; 
+}
+.phase-gat .reveal-delay-1 { transition-delay: 0.05s; }
+.phase-gat .reveal-delay-2 { transition-delay: 0.1s; }
+.phase-gat .section-padding { padding: 80px 0; }
+
+/* Phase: Tihai (Resolution to Sam) */
+.phase-tihai .reveal { 
+  transition-duration: 2s; 
+  transition-delay: 0.2s;
+}
+
+/* ==============================
    SCROLL REVEAL SYSTEM
    ============================== */
 
 .reveal {
-  opacity: 0.001; /* Prevent blank page in some crawlers while staying 'hidden' */
+  opacity: 0.001; 
   transform: translateY(24px);
   transition: opacity 1.2s var(--ease-premium), transform 1.2s var(--ease-premium);
 }
@@ -206,7 +336,6 @@ p {
 
 /* ==============================
    IMAGE LOAD TRANSITION
-   blur(8px) + opacity 0.6 → blur(0) + opacity 1
    ============================== */
 
 .img-reveal {
@@ -247,7 +376,7 @@ button, .btn {
 }
 
 .btn-primary {
-  background-color: var(--primary-crimson);
+  background-color: var(--hora-crimson);
   color: var(--pure-white);
 }
 
@@ -264,8 +393,8 @@ button, .btn {
 }
 
 .btn-secondary:hover {
-  border-color: var(--primary-crimson);
-  color: var(--primary-crimson);
+  border-color: var(--hora-crimson);
+  color: var(--hora-crimson);
   background-color: rgba(140, 29, 44, 0.04);
 }
 
@@ -287,12 +416,12 @@ button, .btn {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--primary-crimson);
+  background-color: var(--hora-crimson);
   transition: width 0.4s var(--ease-premium);
 }
 
 .btn-tertiary:hover {
-  color: var(--primary-crimson);
+  color: var(--hora-crimson);
   border-bottom-color: transparent;
 }
 
@@ -338,7 +467,7 @@ button, .btn {
 .gold { color: var(--heritage-gold) !important; }
 .light { color: var(--bone-white) !important; }
 .muted { color: var(--muted-gray) !important; }
-.crimson { color: var(--primary-crimson) !important; }
+.crimson { color: var(--hora-crimson) !important; }
 
 /* Premium Texture Overlay */
 .grain-overlay {
@@ -349,9 +478,10 @@ button, .btn {
   height: calc(100% + 100px);
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.015;
+  opacity: var(--hora-grain-opacity);
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  animation: grainDrift 8s linear infinite;
+  animation: grainDrift 20s linear infinite; /* Slowed for masterpiece restraint */
+  transition: opacity 1.2s var(--ease-premium);
 }
 
 @keyframes grainDrift {
@@ -363,8 +493,7 @@ button, .btn {
 }
 
 /* Cinematic Viewport Vignette */
-.app-wrapper::after {
-  content: '';
+.vignette {
   position: fixed;
   top: 0;
   left: 0;
@@ -381,10 +510,10 @@ button, .btn {
   top: 0;
   left: 0;
   height: 1px;
-  background-color: var(--primary-crimson);
+  background-color: var(--hora-crimson);
   z-index: 10001;
   width: calc(var(--scroll-progress, 0) * 100%);
-  transition: width 0.1s linear;
+  transition: width 0.1s linear, background-color 1.2s var(--ease-premium);
 }
 
 /* Section Breathing Dividers */
@@ -493,5 +622,11 @@ button, .btn {
 
   .image-container:hover img {
     transform: none;
+  }
+
+  .app-wrapper::before,
+  .app-wrapper::after,
+  .grain-overlay {
+    animation: none !important;
   }
 }

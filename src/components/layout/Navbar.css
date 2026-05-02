@@ -96,9 +96,16 @@
   border: none;
   cursor: pointer;
   color: var(--deep-charcoal);
-  display: none;
   padding: 8px;
   z-index: 1001;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
 }
 
 /* Mobile Drawer */
