@@ -10,131 +10,53 @@
   padding-top: 80px; /* Navbar height */
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/assets/textures/manuscript.png');
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 2s var(--ease-premium) 0.4s;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.hero-loaded::before {
-  opacity: 0.03;
+.hero-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-container {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-centerpiece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 60px;
+  width: 100%;
 }
 
-.hero-content {
-  z-index: 10;
-  max-width: 600px;
+.hero-logo-reveal {
+  width: 100%;
+  max-width: 900px;
+  perspective: 1000px;
 }
 
-.hero-title {
-  margin-bottom: 24px;
-  color: var(--deep-charcoal);
-  line-height: 0.95;
-}
-
-.hero-title .bengali-heading {
-  display: block;
-  font-size: 0.85em;
-  margin-top: 10px;
-  color: var(--primary-crimson);
+.hero-content-centered {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-description {
-  font-size: 18px;
-  margin-bottom: 40px;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+  margin-bottom: 48px;
   color: var(--soft-charcoal);
+  max-width: 600px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 20px;
-}
-
-.hero-visual {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-object-container {
-  position: relative;
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 5;
-}
-
-/* Esraj Resonance Ring */
-.hero-object-container::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(140, 29, 44, 0.1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  opacity: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.hero-loaded .hero-object-container::before {
-  animation: resonance 4s var(--ease-premium) 2.5s infinite;
-}
-
-@keyframes resonance {
-  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
-  20% { opacity: 0.3; }
-  100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
-}
-
-.hero-object {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: blur(8px);
-  opacity: 0.6;
-  transition: filter 1s var(--ease-enter), opacity 1s var(--ease-enter), transform 0.6s var(--ease-emphasis);
-}
-
-.hero-object:hover {
-  transform: rotate(0.5deg) scale(1.02);
-}
-
-.hero-object.loaded {
-  filter: blur(0);
-  opacity: 1;
-}
-
-.hero-object-shadow {
-  position: absolute;
-  bottom: 10%;
-  width: 60%;
-  height: 40px;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 70%);
-  z-index: -1;
+  gap: 24px;
 }
 
 .hero-texture-overlay {
@@ -147,6 +69,7 @@
   background-size: cover;
   opacity: 0.03;
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-scroll-indicator {
@@ -181,22 +104,14 @@
 .hero-reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.9s var(--ease-premium), transform 0.9s var(--ease-premium);
+  transition: opacity 1.2s var(--ease-premium), transform 1.2s var(--ease-premium);
 }
 
-/* Object gets a special reveal — scale settle */
-.hero-reveal-obj {
-  transform: scale(0.96);
-  transition: opacity 1s var(--ease-premium), transform 1.2s var(--ease-premium), filter 0.8s var(--ease-premium);
-}
-
-/* Staggered delays — controlled entirely by CSS */
-.hero-reveal-1 { transition-delay: 0.8s; }
-.hero-reveal-2 { transition-delay: 1.1s; }
-.hero-reveal-3 { transition-delay: 1.4s; }
-.hero-reveal-4 { transition-delay: 1.7s; }
-.hero-reveal-5 { transition-delay: 2.5s; }
-.hero-reveal-obj { transition-delay: 0.5s; }
+/* Redefined Reveal Order for Centered Layout */
+.hero-reveal-1 { transition-delay: 2.8s; } /* Eyebrow appears after logo materializes */
+.hero-reveal-2 { transition-delay: 3.1s; } /* Description */
+.hero-reveal-3 { transition-delay: 3.4s; } /* Buttons */
+.hero-reveal-4 { transition-delay: 4.0s; } /* Scroll Indicator */
 
 /* When .hero-loaded is applied, all children reveal */
 .hero-loaded .hero-reveal {
@@ -204,14 +119,9 @@
   transform: translateY(0);
 }
 
-.hero-loaded .hero-reveal-obj {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Scroll indicator pulse — appears last, then settles */
-.hero-loaded .hero-reveal-5 {
-  animation: scrollPulse 2s var(--ease-premium) 2.5s 1;
+/* Scroll indicator pulse */
+.hero-loaded .hero-reveal-4 {
+  animation: scrollPulse 2s var(--ease-premium) 4.5s infinite;
 }
 
 @keyframes scrollPulse {
@@ -224,37 +134,45 @@
    ============================== */
 
 @media (max-width: 1024px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    justify-items: center;
-    padding-bottom: 40px;
-    gap: 20px;
-  }
-  
-  .hero-content {
+  .hero-logo-reveal {
     max-width: 100%;
-    order: 2;
+    padding: 0 20px;
   }
   
-  .hero-visual {
-    order: 1;
-    width: 100%;
-    height: 30vh;
-    min-height: 220px;
-  }
-  
-  .hero-actions {
-    justify-content: center;
+  .hero-centerpiece {
+    gap: 40px;
   }
 
   /* Compress timing on mobile */
-  .hero-reveal-1 { transition-delay: 0.1s; }
-  .hero-reveal-2 { transition-delay: 0.25s; }
-  .hero-reveal-3 { transition-delay: 0.4s; }
-  .hero-reveal-4 { transition-delay: 0.55s; }
-  .hero-reveal-5 { transition-delay: 0.8s; }
-  .hero-reveal-obj { transition-delay: 0.05s; }
+  .hero-reveal-1 { transition-delay: 1.8s; }
+  .hero-reveal-2 { transition-delay: 2.1s; }
+  .hero-reveal-3 { transition-delay: 2.4s; }
+  .hero-reveal-4 { transition-delay: 3.0s; }
+}
+
+@media (max-width: 768px) {
+  .hero-description {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
