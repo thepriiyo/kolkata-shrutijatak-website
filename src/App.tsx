@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
@@ -21,6 +21,7 @@ function App() {
   useScrollProgress();
   const prahar = useAtmosphere();
   const [isIntroComplete, setIsIntroComplete] = useState(false);
+  const lenisRef = useRef<Lenis | null>(null);
 
   // Initialize Lenis Smooth Scroll
   useEffect(() => {
@@ -30,20 +31,40 @@ function App() {
       touchMultiplier: 2,
     });
 
+    lenisRef.current = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
 
     requestAnimationFrame(raf);
-    return () => lenis.destroy();
+    return () => {
+      lenis.destroy();
+      lenisRef.current = null;
+    };
   }, []);
+
+  const handleIntroComplete = () => {
+    setIsIntroComplete(true);
+    
+    // Auto-scroll automation: Initiate the Hero Reveal ceremony
+    setTimeout(() => {
+      if (lenisRef.current) {
+        // Scroll to ~40% of the Hero pin duration to manifest the identity
+        lenisRef.current.scrollTo(window.innerHeight * 0.4, {
+          duration: 3, // Slow, authoritative movement
+          easing: (t) => 1 - Math.pow(1 - t, 4), // Smooth magnetic ease-out
+        });
+      }
+    }, 800); // Wait for the Namaskar fade-out to reach peak atmosphere
+  };
 
   return (
     <div className={`app-wrapper raga-${prahar}`}>
       <ParamparaThread />
       {!isIntroComplete && (
-        <NamaskarLoader onComplete={() => setIsIntroComplete(true)} />
+        <NamaskarLoader onComplete={handleIntroComplete} />
       )}
       
       <div className={`main-content-system ${isIntroComplete ? 'visible' : 'hidden'}`}>
