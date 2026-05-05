@@ -1,0 +1,26 @@
+.alpona-matrix {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Between background and content */
+  pointer-events: none;
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+  image-rendering: pixelated; /* Optimization for mobile upscaling */
+}
+
+@media (max-width: 1024px) {
+  .alpona-matrix {
+    opacity: 0.4; /* Slightly more subtle on mobile to save contrast */
+  }
+}
+
+/* Texture integration */
+.app-wrapper.raga-dawn .alpona-matrix {
+  filter: sepia(0.2) saturate(1.2);
+}
+
+.app-wrapper.raga-dusk .alpona-matrix {
+  filter: hue-rotate(180deg) brightness(0.9);
+}
