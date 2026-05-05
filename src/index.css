@@ -157,3 +157,15 @@ code {
     opacity: 0.015; /* Even more subtle on mobile to avoid LCD flickering */
   }
 }
+
+/* Hydro-Dynamics: The Fluid Manuscript */
+.app-wrapper {
+  filter: url(#fluid-ripple);
+  transition: filter 0.3s ease-out;
+}
+
+@media (max-width: 1024px) {
+  .app-wrapper {
+    filter: none; /* Disabled for low-end mobile to ensure blazing fast speed */
+  }
+}

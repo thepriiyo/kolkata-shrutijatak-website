@@ -18,6 +18,8 @@ import { useAtmosphere } from './hooks/useAtmosphere';
 import InstitutionalArchive from './components/common/InstitutionalArchive';
 import AlponaMatrix from './components/common/AlponaMatrix';
 import OpticalAtmosphere from './components/common/OpticalAtmosphere';
+import SacredSpotlight from './components/common/SacredSpotlight';
+import FluidFilter from './components/common/FluidFilter';
 import './components/common/ParamparaThread.css';
 
 function App() {
@@ -71,7 +73,9 @@ function App() {
     <div className={`app-wrapper raga-${prahar}`}>
       <div className="manuscript-grain-system" aria-hidden="true" />
       <ParamparaThread />
+      <FluidFilter />
       <OpticalAtmosphere />
+      <SacredSpotlight />
       <AlponaMatrix />
       <InstitutionalArchive contentKey={archiveKey} onClose={() => setArchiveKey(null)} />
       

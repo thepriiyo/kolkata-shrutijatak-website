@@ -18,17 +18,37 @@ const AlponaMatrix: React.FC = () => {
   const pointsRef = useRef<Point[]>([]);
   const requestRef = useRef<number | null>(null);
   const scrollPos = useRef(0);
+  const gyroOffset = useRef({ x: 0, y: 0 });
   const tier = usePerformance();
 
   // Resolution Scaling Factor
   const resolutionScale = tier === 'low' ? 0.75 : 1;
+
+  useEffect(() => {
+    // Holographic Gyro: Spatial Tilt for Mobile
+    const handleOrientation = (e: DeviceOrientationEvent) => {
+      if (e.beta !== null && e.gamma !== null) {
+        // Normalize gyro data and apply smoothing
+        gyroOffset.current.x = (e.gamma / 30) * 20; 
+        gyroOffset.current.y = ((e.beta - 45) / 30) * 20; 
+      }
+    };
+
+    if (window.DeviceOrientationEvent && tier === 'high') {
+      window.addEventListener('deviceorientation', handleOrientation);
+    }
+
+    return () => {
+      window.removeEventListener('deviceorientation', handleOrientation);
+    };
+  }, [tier]);
 
   // Mathematical Alpona Motif Drawing
   const drawLotus = (ctx: CanvasRenderingContext2D, x: number, y: number, size: number, opacity: number, depth: number) => {
     ctx.save();
     ctx.translate(x * resolutionScale, y * resolutionScale);
     
-    const blur = tier === 'low' ? 0 : (1.2 - depth) * 4; // Disable blur filter on low-end
+    const blur = tier === 'low' ? 0 : (1.2 - depth) * 4; 
     if (blur > 0) ctx.filter = `blur(${blur}px)`;
     
     ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.15)})`; 
@@ -77,16 +97,21 @@ const AlponaMatrix: React.FC = () => {
     scrollPos.current = currentScroll;
 
     pointsRef.current = pointsRef.current.filter(p => {
-      p.life -= tier === 'low' ? 0.015 : 0.008; // Faster fade on low-end to keep buffer small
+      p.life -= tier === 'low' ? 0.015 : 0.008; 
       if (p.life <= 0) return false;
 
+      // Vertical Parallax
       p.y -= deltaScroll * (p.depth - 1); 
+      
+      // Holographic Gyro Shift
+      const gx = gyroOffset.current.x * (p.depth - 0.8);
+      const gy = gyroOffset.current.y * (p.depth - 0.8);
 
       const opacity = p.life / p.maxLife;
       const currentSize = p.size * (1 + (1 - opacity) * 0.3);
 
-      if (p.type === 'lotus') drawLotus(ctx, p.x, p.y, currentSize, opacity, p.depth);
-      else drawSpiral(ctx, p.x, p.y, currentSize, opacity, p.depth);
+      if (p.type === 'lotus') drawLotus(ctx, p.x + gx, p.y + gy, currentSize, opacity, p.depth);
+      else drawSpiral(ctx, p.x + gx, p.y + gy, currentSize, opacity, p.depth);
 
       return true;
     });
@@ -114,7 +139,7 @@ const AlponaMatrix: React.FC = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const threshold = tier === 'low' ? 0.92 : 0.85; // Less frequent on low-end
+      const threshold = tier === 'low' ? 0.92 : 0.85;
       if (Math.random() > threshold) {
         addPoint(e.clientX, e.clientY);
       }

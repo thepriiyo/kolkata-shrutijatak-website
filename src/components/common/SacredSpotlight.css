@@ -1,0 +1,64 @@
+.sacred-spotlight-system {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; /* Above background/atmosphere, below content */
+  pointer-events: none;
+  --x: 50%;
+  --y: 50%;
+}
+
+.wisdom-layer {
+  position: absolute;
+  inset: 0;
+  background-color: var(--hora-crimson);
+  opacity: 0;
+  mask-image: radial-gradient(
+    circle 200px at var(--x) var(--y),
+    black 0%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 200px at var(--x) var(--y),
+    black 0%,
+    transparent 100%
+  );
+  transition: opacity 1.5s var(--ease-premium);
+}
+
+.sacred-spotlight-system:hover .wisdom-layer,
+body:has(.app-wrapper) .wisdom-layer {
+  opacity: 0.15; /* Only manifests when interacting */
+}
+
+.calligraphy-bloom {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 500 500' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='10%25' y='20%25' font-family='serif' font-size='12' fill='gold' opacity='0.5'%3Eশ্ৰুতিজাতক-প্ৰবাহ-অনাদি%3C/text%3E%3C/svg%3E");
+  background-size: 400px 400px;
+  mix-blend-mode: color-dodge;
+}
+
+.micro-alpona-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 215, 0, 0.2) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+@media (max-width: 1024px) {
+  .wisdom-layer {
+    mask-image: radial-gradient(
+      circle 120px at var(--x) var(--y),
+      black 0%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle 120px at var(--x) var(--y),
+      black 0%,
+      transparent 100%
+    );
+    opacity: 0.1;
+  }
+}
