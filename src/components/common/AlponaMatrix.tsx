@@ -14,7 +14,7 @@ interface Point {
 const AlponaMatrix: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointsRef = useRef<Point[]>([]);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number | null>(null);
 
   // Mathematical Alpona Motif Drawing
   const drawLotus = (ctx: CanvasRenderingContext2D, x: number, y: number, size: number, opacity: number) => {
@@ -47,7 +47,7 @@ const AlponaMatrix: React.FC = () => {
     ctx.restore();
   };
 
-  const animate = (time: number) => {
+  const animate = (_time: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
