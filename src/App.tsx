@@ -69,6 +69,7 @@ function App() {
 
   return (
     <div className={`app-wrapper raga-${prahar}`}>
+      <div className="manuscript-grain-system" aria-hidden="true" />
       <ParamparaThread />
       <OpticalAtmosphere />
       <AlponaMatrix />
