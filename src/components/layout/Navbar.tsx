@@ -72,7 +72,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#apply" className="btn btn-primary nav-cta">Apply Now</a>
+          <a href="#contact" className="btn btn-primary nav-cta">Apply Now</a>
         </div>
 
         <button 
@@ -97,7 +97,7 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#apply" className="btn btn-primary mobile-cta" onClick={() => setIsMobileMenuOpen(false)}>
+          <a href="#contact" className="btn btn-primary mobile-cta" onClick={() => setIsMobileMenuOpen(false)}>
             Apply Now
           </a>
         </div>

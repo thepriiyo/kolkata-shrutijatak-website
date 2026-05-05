@@ -21,24 +21,24 @@ const Footer = () => {
               <h4>INSTITUTION</h4>
               <a href="#about">About Us</a>
               <a href="#faculty">Faculty</a>
-              <a href="#careers">Careers</a>
-              <a href="#news">News</a>
+              <a href="#contact">Careers</a>
+              <a href="#events">News</a>
             </div>
             
             <div className="footer-col">
               <h4>PROGRAMS</h4>
-              <a href="#music">Music</a>
-              <a href="#dance">Dance</a>
-              <a href="#theatre">Theatre</a>
-              <a href="#heritage">Heritage Arts</a>
+              <a href="#programs">Music</a>
+              <a href="#programs">Dance</a>
+              <a href="#programs">Theatre</a>
+              <a href="#programs">Heritage Arts</a>
             </div>
             
             <div className="footer-col">
               <h4>CONNECT</h4>
               <a href="#contact">Contact</a>
-              <a href="#visit">Visit Us</a>
-              <a href="#support">Support</a>
-              <a href="#instagram">Instagram</a>
+              <a href="#contact">Visit Us</a>
+              <a href="#contact">Support</a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
             </div>
           </div>
         </div>

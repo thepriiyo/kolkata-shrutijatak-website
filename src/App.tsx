@@ -15,12 +15,14 @@ import NamaskarLoader from './components/common/NamaskarLoader';
 import ParamparaThread from './components/common/ParamparaThread';
 import { useScrollProgress } from './hooks/useScrollProgress';
 import { useAtmosphere } from './hooks/useAtmosphere';
+import InstitutionalArchive from './components/common/InstitutionalArchive';
 import './components/common/ParamparaThread.css';
 
 function App() {
   useScrollProgress();
   const prahar = useAtmosphere();
   const [isIntroComplete, setIsIntroComplete] = useState(false);
+  const [archiveKey, setArchiveKey] = useState<string | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
 
   // Initialize Lenis Smooth Scroll
@@ -51,18 +53,22 @@ function App() {
     // Auto-scroll automation: Initiate the Hero Reveal ceremony
     setTimeout(() => {
       if (lenisRef.current) {
-        // Scroll to ~40% of the Hero pin duration to manifest the identity
         lenisRef.current.scrollTo(window.innerHeight * 0.4, {
-          duration: 3, // Slow, authoritative movement
-          easing: (t) => 1 - Math.pow(1 - t, 4), // Smooth magnetic ease-out
+          duration: 3,
+          easing: (t) => 1 - Math.pow(1 - t, 4),
         });
       }
-    }, 800); // Wait for the Namaskar fade-out to reach peak atmosphere
+    }, 800);
   };
+
+  // Helper to open archive from children
+  const openArchive = (key: string) => setArchiveKey(key);
 
   return (
     <div className={`app-wrapper raga-${prahar}`}>
       <ParamparaThread />
+      <InstitutionalArchive contentKey={archiveKey} onClose={() => setArchiveKey(null)} />
+      
       {!isIntroComplete && (
         <NamaskarLoader onComplete={handleIntroComplete} />
       )}
@@ -76,14 +82,14 @@ function App() {
         
         <main>
           <div className="phase-alap">
-            <Hero forceReveal={isIntroComplete} />
-            <InstitutionalIntro />
+            <Hero />
+            <InstitutionalIntro onReadMore={() => openArchive('about-full')} />
           </div>
           
           <div className="section-breath"></div>
           
           <div className="phase-jod">
-            <ProgramsPreview />
+            <ProgramsPreview onOpenSyllabus={openArchive} />
             <div className="section-breath"></div>
             <CulturalImmersion />
             <div className="section-breath"></div>

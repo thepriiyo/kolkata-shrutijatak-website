@@ -47,7 +47,7 @@ const EventCard = ({ event, index }: { event: typeof events[0]; index: number })
         <span className="eyebrow" style={{marginBottom: '8px'}}>{event.date} • {event.time}</span>
         <h3 style={{fontSize: '20px'}}>{event.title}</h3>
         <p style={{fontSize: '14px', marginBottom: '16px'}}>{event.location}</p>
-        <a href="#register" className="btn btn-tertiary">Register Interest →</a>
+        <a href="#contact" className="btn btn-tertiary">Register Interest →</a>
       </div>
     </div>
   );

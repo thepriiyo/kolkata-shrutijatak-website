@@ -11,7 +11,7 @@ interface HeroProps {
   forceReveal?: boolean;
 }
 
-const Hero: React.FC<HeroProps> = ({ forceReveal }) => {
+const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const portalRef = useRef<HTMLDivElement>(null);
@@ -137,7 +137,7 @@ const Hero: React.FC<HeroProps> = ({ forceReveal }) => {
             </p>
             
             <div ref={actionsRef} className="hero-actions">
-              <a href="#apply" className="btn btn-primary">Begin Your Journey</a>
+              <a href="#contact" className="btn btn-primary">Begin Your Journey</a>
               <a href="#programs" className="btn btn-secondary">Explore Disciplines</a>
             </div>
           </div>

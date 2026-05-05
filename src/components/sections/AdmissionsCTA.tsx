@@ -17,8 +17,8 @@ const AdmissionsCTA = () => {
               Our admissions process is a conversation about your journey.
             </p>
             <div className="admissions-actions reveal-delay-4">
-              <a href="#apply-now" className="btn btn-primary btn-large">Apply for Admission</a>
-              <a href="#prospectus" className="btn btn-secondary gold">Download Prospectus</a>
+              <a href="#contact" className="btn btn-primary btn-large">Apply for Admission</a>
+              <a href="#contact" className="btn btn-secondary gold">Download Prospectus</a>
             </div>
           </div>
         </div>

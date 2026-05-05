@@ -4,7 +4,11 @@ import { useImageLoad } from '../../hooks/useImageLoad';
 import { useParallax } from '../../hooks/useParallax';
 import './Section.css';
 
-const InstitutionalIntro = () => {
+interface InstitutionalIntroProps {
+  onReadMore: () => void;
+}
+
+const InstitutionalIntro: React.FC<InstitutionalIntroProps> = ({ onReadMore }) => {
   // Hero-adjacent: higher threshold (0.25) = reveals later for pacing
   const sectionRef = useScrollReveal<HTMLDivElement>(0.25, '0px 0px -80px 0px');
   const portraitRef = useParallax<HTMLDivElement>(0.02);
@@ -39,7 +43,7 @@ const InstitutionalIntro = () => {
               a new standard of artistic excellence.
             </p>
             <div className="mt-40 reveal-delay-4">
-              <a href="#about-full" className="btn btn-tertiary">Read our full story →</a>
+              <button onClick={onReadMore} className="btn btn-tertiary">Read our full story →</button>
             </div>
           </div>
         </div>

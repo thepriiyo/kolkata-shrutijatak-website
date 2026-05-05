@@ -25,7 +25,7 @@ const programs = [
   }
 ];
 
-const ProgramCard = ({ program, index }: { program: typeof programs[0]; index: number }) => {
+const ProgramCard = ({ program, index, onOpen }: { program: typeof programs[0]; index: number; onOpen: (key: string) => void }) => {
   const cardRef = useProximityGlow<HTMLDivElement>();
   const imgRef = useRef<HTMLImageElement>(null);
   const imgLoaded = useImageLoad(imgRef);
@@ -45,14 +45,23 @@ const ProgramCard = ({ program, index }: { program: typeof programs[0]; index: n
         <h3>{program.title}</h3>
         <p>{program.description}</p>
         <div className="mt-20">
-          <a href={`#program-${index}`} className="btn btn-tertiary">View Syllabus →</a>
+          <button 
+            onClick={() => onOpen(`syllabus-${program.title.toLowerCase().split(' ')[0]}`)} 
+            className="btn btn-tertiary"
+          >
+            View Syllabus →
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-const ProgramsPreview = () => {
+interface ProgramsPreviewProps {
+  onOpenSyllabus: (key: string) => void;
+}
+
+const ProgramsPreview: React.FC<ProgramsPreviewProps> = ({ onOpenSyllabus }) => {
   // Standard threshold — not hero-adjacent
   const headerRef = useScrollReveal<HTMLDivElement>(0.2);
   const gridRef = useScrollReveal<HTMLDivElement>(0.12);
@@ -67,7 +76,7 @@ const ProgramsPreview = () => {
         
         <div ref={gridRef} className="programs-grid reveal">
           {programs.map((program, index) => (
-            <ProgramCard key={index} program={program} index={index} />
+            <ProgramCard key={index} program={program} index={index} onOpen={onOpenSyllabus} />
           ))}
         </div>
       </div>
