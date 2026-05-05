@@ -39,7 +39,7 @@ const archiveData: Record<string, ArchiveContent> = {
       'Module C: Tala Integration. Melodic interplay with complex rhythmic structures.',
       'Masterclass: Performance Aesthetics. The stagecraft of institutional heritage.'
     ],
-    cta: 'Apply for Enrollment'
+    cta: 'Register for Audition'
   },
   'syllabus-classical': {
     title: 'Classical Rhythm Syllabus',
@@ -50,7 +50,7 @@ const archiveData: Record<string, ArchiveContent> = {
       'Phase III: Tatkar. Mastering the rhythmic footwork that echoes the universe.',
       'Phase IV: Performance. The final synthesis of sound, movement, and silence.'
     ],
-    cta: 'Book a Trial Session'
+    cta: 'Register for Audition'
   }
 };
 

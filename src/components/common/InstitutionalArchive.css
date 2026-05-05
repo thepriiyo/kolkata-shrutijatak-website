@@ -100,7 +100,7 @@
 .archive-footer {
   margin-top: 60px;
   padding-top: 30px;
-  padding-bottom: 80px; /* Essential breathing room for the button */
+  padding-bottom: 120px; /* Maximum breathing room for absolute accessibility */
   border-top: 1px solid var(--light-gray);
 }
 
