@@ -7,9 +7,6 @@ import './Hero.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface HeroProps {
-  forceReveal?: boolean;
-}
 
 const Hero: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -107,7 +104,7 @@ const Hero: React.FC = () => {
       titleSplit.revert();
       descSplit.revert();
     };
-  }, [forceReveal]);
+  }, []);
 
   return (
     <section ref={sectionRef} className="hero">
