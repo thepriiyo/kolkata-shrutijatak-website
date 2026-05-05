@@ -12,14 +12,14 @@ const NamaskarLoader: React.FC<NamaskarLoaderProps> = ({ onComplete }) => {
   useEffect(() => {
     if (!isImageLoaded) return;
 
-    // High-Velocity Ritual: 1s total duration
+    // Cinematic Ritual: Ensuring the full 'Glide' and Materialization is seen
     const fadeTimer = setTimeout(() => {
       setIsFading(true);
-    }, 700);
+    }, 2000);
 
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 1000);
+    }, 2800);
 
     return () => {
       clearTimeout(fadeTimer);
