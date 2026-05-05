@@ -79,7 +79,7 @@ const InstitutionalArchive: React.FC<InstitutionalArchiveProps> = ({ contentKey,
           <X size={24} />
         </button>
         
-        <div className="archive-scroll-area">
+        <div className="archive-scroll-area" data-lenis-prevent>
           <header className="archive-header">
             <span className="eyebrow">{content?.subtitle || 'Institutional Archive'}</span>
             <h2>{content?.title || 'Loading Archive...'}</h2>
