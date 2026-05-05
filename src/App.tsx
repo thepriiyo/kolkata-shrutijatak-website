@@ -17,6 +17,7 @@ import { useScrollProgress } from './hooks/useScrollProgress';
 import { useAtmosphere } from './hooks/useAtmosphere';
 import InstitutionalArchive from './components/common/InstitutionalArchive';
 import AlponaMatrix from './components/common/AlponaMatrix';
+import OpticalAtmosphere from './components/common/OpticalAtmosphere';
 import './components/common/ParamparaThread.css';
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
   return (
     <div className={`app-wrapper raga-${prahar}`}>
       <ParamparaThread />
+      <OpticalAtmosphere />
       <AlponaMatrix />
       <InstitutionalArchive contentKey={archiveKey} onClose={() => setArchiveKey(null)} />
       

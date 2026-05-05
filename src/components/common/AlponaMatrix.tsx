@@ -8,20 +8,26 @@ interface Point {
   maxLife: number;
   size: number;
   rotation: number;
-  type: 'lotus' | 'spiral' | 'grain';
+  type: 'lotus' | 'spiral';
+  depth: number; // 0.4 (back) to 1.2 (front)
 }
 
 const AlponaMatrix: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const pointsRef = useRef<Point[]>([]);
   const requestRef = useRef<number | null>(null);
+  const scrollPos = useRef(0);
 
   // Mathematical Alpona Motif Drawing
-  const drawLotus = (ctx: CanvasRenderingContext2D, x: number, y: number, size: number, opacity: number) => {
+  const drawLotus = (ctx: CanvasRenderingContext2D, x: number, y: number, size: number, opacity: number, depth: number) => {
     ctx.save();
     ctx.translate(x, y);
-    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * 0.15})`; // --hora-crimson derived
-    ctx.lineWidth = 1;
+    
+    // Depth-based aesthetics
+    const blur = (1.2 - depth) * 4;
+    ctx.filter = `blur(${blur}px)`;
+    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.15)})`; 
+    ctx.lineWidth = depth * 1.5;
     
     for (let i = 0; i < 8; i++) {
       ctx.rotate(Math.PI / 4);
@@ -32,11 +38,14 @@ const AlponaMatrix: React.FC = () => {
     ctx.restore();
   };
 
-  const drawSpiral = (ctx: CanvasRenderingContext2D, x: number, y: number, size: number, opacity: number) => {
+  const drawSpiral = (ctx: CanvasRenderingContext2D, x: number, y: number, size: number, opacity: number, depth: number) => {
     ctx.save();
     ctx.translate(x, y);
-    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * 0.1})`;
-    ctx.lineWidth = 1;
+    
+    const blur = (1.2 - depth) * 4;
+    ctx.filter = `blur(${blur}px)`;
+    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.12)})`;
+    ctx.lineWidth = depth;
     ctx.beginPath();
     for (let i = 0; i < 20; i++) {
       const angle = 0.5 * i;
@@ -55,15 +64,22 @@ const AlponaMatrix: React.FC = () => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    const currentScroll = window.scrollY;
+    const deltaScroll = currentScroll - scrollPos.current;
+    scrollPos.current = currentScroll;
+
     pointsRef.current = pointsRef.current.filter(p => {
-      p.life -= 0.01;
+      p.life -= 0.008; // Slower fade for holographic feel
       if (p.life <= 0) return false;
 
-      const opacity = p.life / p.maxLife;
-      const currentSize = p.size * (1 + (1 - opacity) * 0.5);
+      // Parallax Application
+      p.y -= deltaScroll * (p.depth - 1); 
 
-      if (p.type === 'lotus') drawLotus(ctx, p.x, p.y, currentSize, opacity);
-      else drawSpiral(ctx, p.x, p.y, currentSize, opacity);
+      const opacity = p.life / p.maxLife;
+      const currentSize = p.size * (1 + (1 - opacity) * 0.3);
+
+      if (p.type === 'lotus') drawLotus(ctx, p.x, p.y, currentSize, opacity, p.depth);
+      else drawSpiral(ctx, p.x, p.y, currentSize, opacity, p.depth);
 
       return true;
     });
@@ -73,25 +89,27 @@ const AlponaMatrix: React.FC = () => {
 
   const addPoint = (x: number, y: number) => {
     const types: ('lotus' | 'spiral')[] = ['lotus', 'spiral'];
+    // Depth distribution: most are mid/back, few are foreground
+    const depth = Math.random() < 0.2 ? 1.2 : Math.random() < 0.5 ? 0.8 : 0.4;
+    
     pointsRef.current.push({
       x,
       y,
       life: 1.0,
       maxLife: 1.0,
-      size: Math.random() * 40 + 20,
+      size: (Math.random() * 40 + 20) * depth,
       rotation: Math.random() * Math.PI * 2,
-      type: types[Math.floor(Math.random() * types.length)]
+      type: types[Math.floor(Math.random() * types.length)],
+      depth
     });
 
-    // Limit points for performance
-    if (pointsRef.current.length > 30) {
+    if (pointsRef.current.length > 40) {
       pointsRef.current.shift();
     }
   };
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Sparsity check to avoid over-drawing
       if (Math.random() > 0.85) {
         addPoint(e.clientX, e.clientY);
       }
