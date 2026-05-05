@@ -162,7 +162,7 @@
     left: auto;
     transform: none;
     order: 1; /* Force Logo to the top */
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Tighter for mobile framing */
     max-width: 95vw;
     margin-left: auto;
     margin-right: auto;
@@ -173,7 +173,7 @@
 
   .hero-content-frame {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px; /* Tighter for mobile */
     text-align: center;
     order: 2; /* Force Text below logo */
     z-index: 10;
@@ -181,7 +181,11 @@
 
   .hero-logo-wrapper {
     width: 100%;
-    max-width: 95vw; /* Expanded to fit to screen as requested */
+    max-width: 95vw; 
+  }
+
+  .hero-description {
+    margin-bottom: 24px; /* Optimized for mobile button visibility */
   }
 
   .hero-actions {
@@ -189,6 +193,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 280px;
+    gap: 12px; /* Tighter vertical stack */
   }
   
   .hero-actions .btn {
@@ -200,15 +205,15 @@
   .hero {
     height: auto;
     min-height: 100vh;
-    padding: 100px 0 60px;
+    padding: 80px 0 40px; /* Reduced top padding for better framing */
   }
   
   .hero-main-title {
-    font-size: clamp(28px, 8vw, 36px);
+    font-size: clamp(26px, 7vw, 32px); /* Slightly smaller for mobile layout safety */
   }
 
   .hero-scroll-ceremony {
-    display: none; /* Removed for mobile clarity and to avoid overlaps */
+    display: none; 
   }
 }
 

@@ -50,15 +50,16 @@ function App() {
   const handleIntroComplete = () => {
     setIsIntroComplete(true);
     
-    // Auto-scroll automation: Initiate the Hero Reveal ceremony
+    // Auto-scroll automation: Swift manifestation of the full Hero identity
     setTimeout(() => {
       if (lenisRef.current) {
-        lenisRef.current.scrollTo(window.innerHeight * 0.4, {
-          duration: 3,
-          easing: (t) => 1 - Math.pow(1 - t, 4),
+        // Deep scroll to reveal the entire Hero section and action buttons
+        lenisRef.current.scrollTo(window.innerHeight * 0.7, {
+          duration: 1.5, // Faster, more dynamic movement
+          easing: (t) => 1 - Math.pow(1 - t, 4), 
         });
       }
-    }, 800);
+    }, 100);
   };
 
   // Helper to open archive from children
