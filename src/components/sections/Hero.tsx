@@ -20,6 +20,22 @@ const Hero: React.FC = () => {
   
   const [logoProgress, setLogoProgress] = useState(0);
 
+  const requestGyro = async () => {
+    if (typeof (DeviceOrientationEvent as any).requestPermission === 'function') {
+      try {
+        const permission = await (DeviceOrientationEvent as any).requestPermission();
+        if (permission === 'granted') {
+          window.location.reload(); 
+        }
+      } catch (err) {
+        console.error('Gyro permission denied:', err);
+      }
+    } else {
+      // For browsers that don't need explicit permission (some Android)
+      alert("Spatial tracking enabled.");
+    }
+  };
+
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -135,7 +151,7 @@ const Hero: React.FC = () => {
             
             <div ref={actionsRef} className="hero-actions">
               <a href="#contact" className="btn btn-primary">Begin Your Journey</a>
-              <a href="#programs" className="btn btn-secondary">Explore Disciplines</a>
+              <button className="btn btn-secondary" onClick={requestGyro}>Calibrate Spatial Monument</button>
             </div>
           </div>
           

@@ -51,8 +51,8 @@ const AlponaMatrix: React.FC = () => {
     const blur = tier === 'low' ? 0 : (1.2 - depth) * 4; 
     if (blur > 0) ctx.filter = `blur(${blur}px)`;
     
-    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.15)})`; 
-    ctx.lineWidth = depth * (tier === 'low' ? 1 : 1.5);
+    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.35)})`; // Increased opacity
+    ctx.lineWidth = depth * (tier === 'low' ? 1.5 : 2.5); // Thicker lines
     
     const s = size * resolutionScale;
     for (let i = 0; i < 8; i++) {
@@ -71,8 +71,8 @@ const AlponaMatrix: React.FC = () => {
     const blur = tier === 'low' ? 0 : (1.2 - depth) * 4;
     if (blur > 0) ctx.filter = `blur(${blur}px)`;
 
-    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.12)})`;
-    ctx.lineWidth = depth;
+    ctx.strokeStyle = `rgba(184, 28, 28, ${opacity * (depth * 0.3)})`; // Increased opacity
+    ctx.lineWidth = depth * 2; // Thicker lines
     ctx.beginPath();
     const s = size * resolutionScale;
     for (let i = 0; i < 20; i++) {
