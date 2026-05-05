@@ -30,7 +30,7 @@ const archiveData: Record<string, ArchiveContent> = {
     ],
     cta: 'Register for Audition'
   },
-  'syllabus-instruments': {
+  'syllabus-instrumental': {
     title: 'Instrumental Mastery Syllabus',
     subtitle: 'The Discipline of the Esraj & Sitar',
     body: [
@@ -41,7 +41,7 @@ const archiveData: Record<string, ArchiveContent> = {
     ],
     cta: 'Apply for Enrollment'
   },
-  'syllabus-dance': {
+  'syllabus-classical': {
     title: 'Classical Rhythm Syllabus',
     subtitle: 'The Language of Movement',
     body: [
