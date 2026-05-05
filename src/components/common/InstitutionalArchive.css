@@ -21,13 +21,13 @@
   max-width: 500px;
   height: 100%;
   background-color: var(--bone-white);
-  padding: 60px 40px;
   position: relative;
   transform: translateX(100%);
   transition: transform 0.8s var(--ease-premium);
   box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Prevent parent overflow */
 }
 
 .archive-overlay.active .archive-drawer {
@@ -48,12 +48,14 @@
   position: absolute;
   top: 30px;
   right: 30px;
-  background: none;
+  background-color: var(--bone-white); /* Ensure it's clickable */
   border: none;
   cursor: pointer;
   color: var(--muted-gray);
   transition: color 0.3s ease;
-  z-index: 10;
+  z-index: 100; /* Highest priority */
+  padding: 10px;
+  border-radius: 50%;
 }
 
 .archive-close:hover {
@@ -63,9 +65,8 @@
 .archive-scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding-right: 20px;
-  /* Ensure the mask doesn't cut off the glow */
-  margin-right: -10px;
+  padding: 80px 40px; /* Padding moved here for full-height scroll */
+  scroll-behavior: smooth;
 }
 
 /* Custom Scrollbar */
@@ -99,8 +100,8 @@
 
 .archive-footer {
   margin-top: 60px;
+  margin-bottom: 60px; /* Space for the bottom of the scroll */
   padding-top: 30px;
-  padding-bottom: 120px; /* Maximum breathing room for absolute accessibility */
   border-top: 1px solid var(--light-gray);
 }
 
