@@ -1,55 +1,97 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { useImageLoad } from '../../hooks/useImageLoad';
 import { useProximityGlow } from '../../hooks/useProximityGlow';
 import './Section.css';
 
-const programs = [
+interface ProgramItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+}
+
+const programs: ProgramItem[] = [
   {
-    title: 'Vocal Heritage',
+    id: 'vocal',
+    title: 'Vocal Heritage Syllabus',
     category: 'Music',
-    description: 'Mastering the nuances of Khayal and Rabindra Sangeet.',
+    description: 'Mastering the nuances of Khayal and Rabindra Sangeet through ancient microtonal breathwork.',
     image: '/assets/gallery/gallery-1.png'
   },
   {
-    title: 'Instrumental Mastery',
+    id: 'instrumental',
+    title: 'Instrumental Mastery Syllabus',
     category: 'Instruments',
-    description: 'The sacred discipline of Esraj, Sitar, and Sarod.',
+    description: 'The sacred discipline of Esraj, Sitar, and Sarod harmonic resonance and fret agility.',
     image: '/assets/gallery/gallery-2.png'
   },
   {
-    title: 'Classical Rhythm',
+    id: 'classical',
+    title: 'Classical Rhythm Syllabus',
     category: 'Dance',
-    description: 'The expressive language of Kathak and Odissi.',
+    description: 'The expressive geometric language and rhythmic Tatkar footwork of Kathak and Odissi.',
     image: '/assets/gallery/gallery-3.png'
   }
 ];
 
-const ProgramCard = ({ program, index, onOpen }: { program: typeof programs[0]; index: number; onOpen: (key: string) => void }) => {
+interface ProgramCardProps {
+  program: ProgramItem;
+  index: number;
+  onOpenSyllabus: (disciplineId?: string) => void;
+}
+
+const ProgramCard: React.FC<ProgramCardProps> = ({ program, index, onOpenSyllabus }) => {
   const cardRef = useProximityGlow<HTMLDivElement>();
   const imgRef = useRef<HTMLImageElement>(null);
   const imgLoaded = useImageLoad(imgRef);
 
   return (
     <div ref={cardRef} className={`program-card reveal-delay-${index + 1}`}>
-      <div className="program-image image-container">
+      {/* Clickable Picture - Redirects to View Syllabus Page */}
+      <div 
+        className="program-image image-container clickable-syllabus-image"
+        onClick={() => onOpenSyllabus(program.id)}
+        role="button"
+        tabIndex={0}
+        aria-label={`Click to view full syllabus for ${program.title}`}
+        title={`Click to view ${program.title}`}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            onOpenSyllabus(program.id);
+          }
+        }}
+      >
         <img 
           ref={imgRef}
           src={program.image} 
           alt={program.title} 
           className={`img-reveal ${imgLoaded ? 'loaded' : ''}`}
         />
+        <div className="image-syllabus-hover-badge">
+          <span>View Syllabus ↗</span>
+        </div>
       </div>
+
       <div className="program-content">
-        <span className="eyebrow" style={{marginBottom: '8px'}}>{program.category}</span>
+        <div className="program-header-row">
+          <span className="eyebrow" style={{ marginBottom: 0 }}>{program.category}</span>
+          <span className="syllabus-badge-pill">Syllabus Available</span>
+        </div>
         <h3>{program.title}</h3>
         <p>{program.description}</p>
+        
+        {/* Highlighted View Syllabus Option */}
         <div className="mt-20">
           <button 
-            onClick={() => onOpen(`syllabus-${program.title.toLowerCase().split(' ')[0]}`)} 
-            className="btn btn-tertiary"
+            onClick={() => onOpenSyllabus(program.id)} 
+            className="btn-view-syllabus-highlight"
+            aria-label={`View Syllabus for ${program.title}`}
           >
-            View Syllabus →
+            <span className="highlight-text">View Syllabus</span>
+            <span className="highlight-arrow">→</span>
           </button>
         </div>
       </div>
@@ -58,11 +100,10 @@ const ProgramCard = ({ program, index, onOpen }: { program: typeof programs[0]; 
 };
 
 interface ProgramsPreviewProps {
-  onOpenSyllabus: (key: string) => void;
+  onOpenSyllabus: (disciplineId?: string) => void;
 }
 
 const ProgramsPreview: React.FC<ProgramsPreviewProps> = ({ onOpenSyllabus }) => {
-  // Standard threshold — not hero-adjacent
   const headerRef = useScrollReveal<HTMLDivElement>(0.2);
   const gridRef = useScrollReveal<HTMLDivElement>(0.12);
 
@@ -72,11 +113,19 @@ const ProgramsPreview: React.FC<ProgramsPreviewProps> = ({ onOpenSyllabus }) => 
         <div ref={headerRef} className="text-center mb-40 reveal">
           <span className="eyebrow">Disciplines</span>
           <h2>The Architecture of Art</h2>
+          <p className="section-subtitle mt-10" style={{ maxWidth: '640px', margin: '12px auto 0', color: 'var(--muted-gray)' }}>
+            Select any discipline or click on any picture to view our comprehensive, codified syllabi preserved under Guru-Shishya Parampara.
+          </p>
         </div>
         
         <div ref={gridRef} className="programs-grid reveal">
           {programs.map((program, index) => (
-            <ProgramCard key={index} program={program} index={index} onOpen={onOpenSyllabus} />
+            <ProgramCard 
+              key={program.id} 
+              program={program} 
+              index={index} 
+              onOpenSyllabus={onOpenSyllabus} 
+            />
           ))}
         </div>
       </div>

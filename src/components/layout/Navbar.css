@@ -85,6 +85,11 @@
   width: 100%;
 }
 
+.nav-link-syllabus {
+  color: var(--primary-crimson);
+  font-weight: 600;
+}
+
 .nav-cta {
   padding: 12px 24px;
   font-size: 12px;

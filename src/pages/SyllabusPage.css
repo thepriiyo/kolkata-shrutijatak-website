@@ -1,0 +1,800 @@
+/* ==========================================================================
+   SYLLABUS PAGE — KOLKATA SHRUTIJATAK
+   High-Authority Museum-Grade Curricular Architecture
+   ========================================================================== */
+
+.syllabus-page-container {
+  min-height: 100vh;
+  background-color: var(--hora-bg, #F8F5F0);
+  color: var(--deep-charcoal, #111111);
+  position: relative;
+  z-index: 10;
+  animation: fadeIn 0.4s var(--ease-premium);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. TOP NAVBAR */
+.syllabus-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(248, 245, 240, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--light-gray, #D8D3CC);
+  z-index: 100;
+  padding: 16px 0;
+}
+
+.syllabus-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.syllabus-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid var(--light-gray, #D8D3CC);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--deep-charcoal);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-premium);
+}
+
+.syllabus-back-btn:hover {
+  background-color: var(--pure-white);
+  border-color: var(--hora-crimson, #8C1D2C);
+  color: var(--hora-crimson, #8C1D2C);
+  transform: translateX(-2px);
+}
+
+.syllabus-nav-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+.brand-accent {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--deep-charcoal);
+}
+
+.brand-sub {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted-gray);
+}
+
+.syllabus-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.syllabus-print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--pure-white);
+  border: 1px solid var(--light-gray);
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--deep-charcoal);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.syllabus-print-btn:hover {
+  border-color: var(--hora-crimson);
+  color: var(--hora-crimson);
+}
+
+.syllabus-apply-btn {
+  padding: 8px 18px !important;
+  font-size: 13px !important;
+}
+
+/* 2. HERO HEADER */
+.syllabus-hero {
+  padding: 80px 0 50px;
+  background: linear-gradient(180deg, rgba(140, 29, 44, 0.03) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(216, 211, 204, 0.6);
+}
+
+.syllabus-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(184, 154, 99, 0.12);
+  border: 1px solid rgba(184, 154, 99, 0.35);
+  color: #7D612F;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.badge-sparkle {
+  color: #B89A63;
+}
+
+.syllabus-hero-title {
+  font-family: var(--font-heading);
+  font-size: 52px;
+  line-height: 1.15;
+  color: var(--deep-charcoal);
+  margin-bottom: 20px;
+}
+
+.bengali-script {
+  display: block;
+  font-family: var(--font-bengali-heading, 'Noto Serif Bengali', serif);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--hora-crimson, #8C1D2C);
+  margin-top: 8px;
+  letter-spacing: 0.02em;
+}
+
+.syllabus-hero-desc {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted-gray);
+}
+
+/* FILTER PILLS */
+.discipline-filter-pills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background: var(--warm-ivory, #F3EEE7);
+  padding: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--light-gray);
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--deep-charcoal);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-premium);
+}
+
+.filter-pill:hover {
+  color: var(--hora-crimson);
+}
+
+.filter-pill.active {
+  background: var(--hora-crimson, #8C1D2C);
+  color: var(--pure-white);
+  box-shadow: 0 4px 16px rgba(140, 29, 44, 0.25);
+}
+
+/* 3. MAIN SYLLABUS CARDS */
+.syllabus-content {
+  padding: 60px 0 100px;
+}
+
+.discipline-syllabus-card {
+  background: var(--pure-white);
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+  padding: 48px;
+  margin-bottom: 70px;
+  scroll-margin-top: 100px;
+  transition: border-color 0.4s var(--ease-premium);
+}
+
+.discipline-syllabus-card:hover {
+  border-color: rgba(140, 29, 44, 0.25);
+}
+
+/* Top split: visual + meta */
+.syllabus-card-top {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.syllabus-visual-col {
+  width: 100%;
+}
+
+.syllabus-img-wrapper {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.syllabus-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-premium);
+}
+
+.discipline-syllabus-card:hover .syllabus-img-wrapper img {
+  transform: scale(1.03);
+}
+
+.syllabus-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(17, 17, 17, 0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+}
+
+.bengali-watermark {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: var(--font-bengali-heading, 'Noto Serif Bengali', serif);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Meta col */
+.discipline-category-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--hora-crimson, #8C1D2C);
+  background: rgba(140, 29, 44, 0.06);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.discipline-title {
+  font-family: var(--font-heading);
+  font-size: 34px;
+  line-height: 1.2;
+  color: var(--deep-charcoal);
+  margin-bottom: 4px;
+}
+
+.discipline-bengali-title {
+  font-family: var(--font-bengali-heading, 'Noto Serif Bengali', serif);
+  font-size: 18px;
+  color: #8C1D2C;
+  margin-bottom: 16px;
+}
+
+.discipline-tagline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted-gray);
+  margin-bottom: 24px;
+}
+
+.discipline-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  background: var(--bone-white);
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(216, 211, 204, 0.7);
+}
+
+.spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.spec-icon {
+  color: var(--hora-crimson);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.spec-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-gray);
+  margin-bottom: 2px;
+}
+
+.spec-value {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--deep-charcoal);
+}
+
+/* Philosophical quote */
+.syllabus-philosophy-quote {
+  position: relative;
+  background: rgba(184, 154, 99, 0.07);
+  border-left: 3px solid #B89A63;
+  padding: 20px 24px 20px 48px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 40px;
+}
+
+.quote-mark {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  font-family: var(--font-heading);
+  font-size: 40px;
+  line-height: 1;
+  color: #B89A63;
+  opacity: 0.6;
+}
+
+.syllabus-philosophy-quote p {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.7;
+  color: #38352F;
+  margin-bottom: 6px;
+}
+
+.quote-source {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #7D612F;
+  font-weight: 600;
+}
+
+/* 4. CURRICULAR PROGRESSION TABS */
+.curriculum-progression-section {
+  margin-bottom: 40px;
+}
+
+.section-header-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.section-header-compact h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--deep-charcoal);
+}
+
+.compact-icon {
+  color: var(--hora-crimson);
+}
+
+.level-tabs-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.level-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: var(--bone-white);
+  border: 1px solid var(--light-gray);
+  padding: 14px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-premium);
+}
+
+.level-tab-btn:hover {
+  background: var(--warm-ivory);
+  border-color: rgba(140, 29, 44, 0.4);
+}
+
+.level-tab-btn.active {
+  background: var(--pure-white);
+  border-color: var(--hora-crimson);
+  box-shadow: 0 4px 16px rgba(140, 29, 44, 0.12);
+  position: relative;
+}
+
+.level-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--hora-crimson);
+  border-radius: 0 0 4px 4px;
+}
+
+.tab-bengali {
+  font-family: var(--font-bengali-heading, 'Noto Serif Bengali', serif);
+  font-size: 12px;
+  color: var(--hora-crimson);
+  margin-bottom: 2px;
+}
+
+.tab-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--deep-charcoal);
+}
+
+/* Active level detail display */
+.level-detail-card {
+  background: var(--warm-ivory, #F3EEE7);
+  border: 1px solid rgba(216, 211, 204, 0.8);
+  border-radius: 6px;
+  padding: 30px;
+}
+
+.level-duration-badge {
+  display: inline-block;
+  background: rgba(140, 29, 44, 0.08);
+  color: var(--hora-crimson);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+
+.level-detail-header h4 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--deep-charcoal);
+  margin-bottom: 6px;
+}
+
+.level-focus-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted-gray);
+  margin-bottom: 24px;
+}
+
+.level-breakdown-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+}
+
+.breakdown-col h5 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--deep-charcoal);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(216, 211, 204, 0.8);
+}
+
+.syllabus-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.syllabus-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #333333;
+}
+
+.bullet-arrow {
+  color: var(--hora-crimson);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.bullet-check {
+  color: #2E7D32;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.outcomes-col {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(216, 211, 204, 0.6);
+}
+
+/* 5. SECONDARY GRID: AUDITION & REGIMEN */
+.syllabus-secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.secondary-box {
+  background: var(--bone-white);
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  padding: 28px;
+}
+
+.box-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--hora-crimson);
+  margin-bottom: 18px;
+}
+
+.box-title h4 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--deep-charcoal);
+}
+
+.regimen-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.regimen-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(216, 211, 204, 0.8);
+}
+
+.regimen-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.regimen-time {
+  font-weight: 600;
+  color: var(--hora-crimson);
+  font-size: 12px;
+  letter-spacing: 0.05em;
+}
+
+.regimen-activity {
+  color: #333333;
+}
+
+/* REPERTOIRE STRIP */
+.syllabus-repertoire-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: var(--warm-ivory);
+  padding: 16px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--light-gray);
+}
+
+.repertoire-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--deep-charcoal);
+}
+
+.repertoire-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.repertoire-pill {
+  background: var(--pure-white);
+  border: 1px solid rgba(216, 211, 204, 0.8);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--muted-gray);
+}
+
+/* 6. ENROLLMENT CTA */
+.syllabus-cta-section {
+  padding: 80px 0;
+  background: var(--warm-ivory);
+  border-top: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.syllabus-cta-section h2 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  color: var(--deep-charcoal);
+  margin-bottom: 16px;
+}
+
+.syllabus-cta-section p {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted-gray);
+}
+
+.syllabus-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* 7. FOOTER */
+.syllabus-footer {
+  padding: 40px 0;
+  font-size: 13px;
+  color: var(--muted-gray);
+  border-top: 1px solid rgba(216, 211, 204, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .syllabus-hero-title {
+    font-size: 38px;
+  }
+
+  .syllabus-card-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .syllabus-img-wrapper {
+    aspect-ratio: 16/9;
+  }
+
+  .level-tabs-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .level-breakdown-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .syllabus-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .syllabus-hero {
+    padding: 50px 0 36px;
+  }
+
+  .syllabus-hero-title {
+    font-size: 30px;
+  }
+
+  .bengali-script {
+    font-size: 20px;
+  }
+
+  .discipline-filter-pills {
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .filter-pill {
+    padding: 8px 14px;
+    font-size: 13px;
+    flex: 1 1 45%;
+    justify-content: center;
+  }
+
+  .discipline-syllabus-card {
+    padding: 24px 18px;
+    margin-bottom: 40px;
+  }
+
+  .discipline-title {
+    font-size: 26px;
+  }
+
+  .discipline-spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .level-tabs-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .level-detail-card {
+    padding: 18px;
+  }
+
+  .regimen-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .syllabus-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR PDF DOWNLOAD
+   ========================================================================== */
+@media print {
+  .syllabus-navbar,
+  .discipline-filter-pills,
+  .syllabus-cta-section,
+  .syllabus-back-btn,
+  .syllabus-print-btn,
+  .level-tabs-strip {
+    display: none !important;
+  }
+
+  .syllabus-page-container {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .discipline-syllabus-card {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    page-break-after: always;
+    padding: 20px !important;
+  }
+}
